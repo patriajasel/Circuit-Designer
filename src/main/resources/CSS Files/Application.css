@@ -1,0 +1,71 @@
+
+.label{
+    -fx-font-family: "Segoe UI Black";
+}
+
+#appTitle{
+    -fx-font-size: 50;
+    -fx-text-fill: #ffffff;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.75), 10, 0.5, 2, 2);
+}
+
+#optionsTitle{
+    -fx-font-size: 25;
+    -fx-alignment: center;
+}
+
+#optionsPane{
+    -fx-background-color: White;
+    -fx-border-color: black;
+    -fx-border-width: 2px;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+}
+
+#descriptPane{
+    -fx-background-color: White;
+    -fx-border-color: black;
+    -fx-border-width: 2px;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-padding: 10px;
+}
+
+#descriptLabel {
+    -fx-font-size: 14;
+    -fx-font-family: "Dubai Medium";
+    -fx-font-weight: normal;
+}
+
+.button {
+    -fx-background-color:
+            #000000,
+            linear-gradient(#7ebcea, #2f4b8f),
+            linear-gradient(#426ab7, #263e75),
+            linear-gradient(#395cab, #223768);
+    -fx-background-insets: 0,1,2,3;
+    -fx-background-radius: 3,2,2,2;
+    -fx-padding: 12 30 12 30;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-pref-width: 250;
+    -fx-pref-height: 50;
+}
+
+.button text {
+    -fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.8) , 0, 0.0 , 0 , 1);
+}
+
+.button:hover {
+    -fx-background-color:
+            #000000,
+            linear-gradient(#7ebcea, #2f4b8f),
+            linear-gradient(#426ab7, #263e75),
+            linear-gradient(#395cab, #223768);
+    -fx-background-insets: 0,1,2,3;
+    -fx-background-radius: 3,2,2,2;
+    -fx-padding: 12 30 12 30;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight:bold;
+}
