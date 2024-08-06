@@ -4,14 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7b4f7446-ab4e-4ce7-a7d6-1899c4058e07" name="Changes" comment="Homepage Complete with need of minor updates for their function">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/circuitdesigner/PCBSelector.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/circuitdesigner/PCBSelector.fxml" afterDir="false" />
+    <list default="true" id="7b4f7446-ab4e-4ce7-a7d6-1899c4058e07" name="Changes" comment="Selecting PCB Sizes window (Completed)&#10;&#10;/Minor changes needed&#10;* Smooth transition from Homepage.&#10;* Add Button event handlers.&#10;* Stop Homepage from popping when navigating to PCB selecting page.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/circuitdesigner/CNCControls.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/circuitdesigner/SketchBoard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/circuitdesigner/CNCControls.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/circuitdesigner/SketchBoard.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/circuitdesigner/EventController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/circuitdesigner/EventController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/CSS Files/Application.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CSS Files/Application.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/circuitdesigner/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/circuitdesigner/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/CSS Files/Application.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/css/Application.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/circuitdesigner/Homepage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/circuitdesigner/Homepage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/circuitdesigner/PCBSelector.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/circuitdesigner/PCBSelector.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,23 +62,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.HomePage.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_directory_selection": "C:/Users/Jasel/IdeaProjects/CircuitDesigner/src/main/java/com/example/circuitdesigner",
-    "last_opened_file_path": "C:/JavaFx SDK/openjfx-22.0.2_windows-x64_bin-sdk/javafx-sdk-22.0.2/lib",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.JavaFX"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.HomePage.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/Jasel/IdeaProjects/CircuitDesigner/src/main/java/com/example/circuitdesigner&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/JavaFx SDK/openjfx-22.0.2_windows-x64_bin-sdk/javafx-sdk-22.0.2/lib&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.JavaFX&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Jasel\IdeaProjects\CircuitDesigner\src\main\resources\assets" />
@@ -101,11 +104,20 @@
       <option name="project" value="LOCAL" />
       <updated>1722873114124</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Selecting PCB Sizes window (Completed)&#10;&#10;/Minor changes needed&#10;* Smooth transition from Homepage.&#10;* Add Button event handlers.&#10;* Stop Homepage from popping when navigating to PCB selecting page.">
+      <option name="closed" value="true" />
+      <created>1722917078052</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1722917078053</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Homepage Complete with need of minor updates for their function" />
-    <option name="LAST_COMMIT_MESSAGE" value="Homepage Complete with need of minor updates for their function" />
+    <MESSAGE value="Selecting PCB Sizes window (Completed)&#10;&#10;/Minor changes needed&#10;* Smooth transition from Homepage.&#10;* Add Button event handlers.&#10;* Stop Homepage from popping when navigating to PCB selecting page." />
+    <option name="LAST_COMMIT_MESSAGE" value="Selecting PCB Sizes window (Completed)&#10;&#10;/Minor changes needed&#10;* Smooth transition from Homepage.&#10;* Add Button event handlers.&#10;* Stop Homepage from popping when navigating to PCB selecting page." />
   </component>
 </project>

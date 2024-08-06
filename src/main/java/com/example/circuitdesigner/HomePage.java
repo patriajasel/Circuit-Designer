@@ -16,7 +16,7 @@ public class HomePage extends Application {
         Scene scene = new Scene(fxmlLoader.load());
 
         // Inheriting CSS file
-        String cssPath = Objects.requireNonNull(this.getClass().getResource("/CSS Files/Application.css")).toExternalForm();
+        String cssPath = Objects.requireNonNull(this.getClass().getResource("/css/Application.css")).toExternalForm();
         scene.getStylesheets().add(cssPath);
 
         // Title and Icon of the Application

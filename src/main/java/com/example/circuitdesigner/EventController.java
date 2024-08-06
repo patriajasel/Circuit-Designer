@@ -58,15 +58,21 @@ public class EventController{
     /* S C E N E   S W I T C H I N G   M E T H O D S */
 
     private Stage stage;
-    private Scene scene;
     private Parent root;
 
 
     public void switchToPCBSize(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("PCBSelector.fxml")));
+        /* This line of code retrieves the current stage (window). This is useful when you need to manipulate the current stage, such as closing it, resizing it, or showing a dialog from it.
         stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
+        */
+
+        /* This line of code creates a new Stage instance. This is useful when you want to open a new window, separate from the existing one.
+        stage = new Stage();
+         */
+
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("PCBSelector.fxml")));
+        stage = new Stage();
+        stage.setScene(new Scene(root));
         stage.show();
     }
 }
