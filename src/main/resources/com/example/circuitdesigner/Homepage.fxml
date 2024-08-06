@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane fx:id="homePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.circuitdesigner.EventController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.circuitdesigner.EventController">
    <children>
       <ImageView fitHeight="600.0" fitWidth="1000.0" pickOnBounds="true">
          <image>
@@ -30,7 +30,7 @@
       <AnchorPane fx:id="optionsPane" layoutX="555.0" layoutY="218.0" prefHeight="343.0" prefWidth="391.0" stylesheets="@../../../CSS%20Files/Application.css">
          <children>
             <Label id="optionsTitle" fx:id="optionsTitle" layoutX="4.0" layoutY="32.0" prefHeight="18.0" prefWidth="385.0" stylesheets="@../../../CSS%20Files/Application.css" text="Begin your Project" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="4.0" />
-            <Button fx:id="createButton" alignment="CENTER" layoutX="76.0" layoutY="100.0" mnemonicParsing="false" onMouseEntered="#onButtonHover" onMouseExited="#onButtonHoverExit" stylesheets="@../../../CSS%20Files/Application.css" text="Create your Design" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0">
+            <Button fx:id="createButton" alignment="CENTER" layoutX="76.0" layoutY="100.0" mnemonicParsing="false" onAction="#switchToPCBSize" onMouseEntered="#onButtonHover" onMouseExited="#onButtonHoverExit" stylesheets="@../../../CSS%20Files/Application.css" text="Create your Design" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0">
                <graphic>
                   <FontAwesomeIconView fill="#fffdfd" glyphName="PENCIL" selectionFill="#fcfcfc" size="16" />
                </graphic>
