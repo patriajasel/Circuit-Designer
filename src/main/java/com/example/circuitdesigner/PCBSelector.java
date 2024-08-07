@@ -1,10 +1,19 @@
 package com.example.circuitdesigner;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.net.URL;
+import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class PCBSelector implements Initializable {
@@ -40,4 +49,30 @@ public class PCBSelector implements Initializable {
         sizesChoiceBox.setValue(sizes[0]);
 
     }
+
+    private Stage stage;
+    private Parent root;
+    private StageService stageService;
+
+    public void setStageService(StageService stageService) {
+        this.stageService = stageService;
+    }
+
+    public void switchToSketchBoard(ActionEvent event) throws IOException {
+
+        stageService.getPrimaryStage().close();
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("SketchBoard.fxml")));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setScene(new Scene(root));
+        stage.show();
+
+    }
+
+    public void cancelCurrentWindow (ActionEvent event) throws IOException {
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("PCBSelector.fxml")));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setScene(new Scene(root));
+        stage.close();
+    }
+
 }

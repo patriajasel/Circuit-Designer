@@ -8,6 +8,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
@@ -59,7 +60,18 @@ public class EventController{
 
     private Stage stage;
     private Parent root;
+    private StageService stageService;
 
+    public void setPrimaryStage(Stage primaryStage){
+        this.stage = primaryStage;
+
+    }
+
+    public void setStageService (StageService stageService) {
+        this.stageService = stageService;
+        stageService.setPrimaryStage(stage);
+
+    }
 
     public void switchToPCBSize(ActionEvent event) throws IOException {
         /* This line of code retrieves the current stage (window). This is useful when you need to manipulate the current stage, such as closing it, resizing it, or showing a dialog from it.
@@ -70,9 +82,21 @@ public class EventController{
         stage = new Stage();
          */
 
-        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("PCBSelector.fxml")));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("PCBSelector.fxml"));
+        root = loader.load();
+        PCBSelector pcbSelector = loader.getController();
+        pcbSelector.setStageService(stageService);
+        stageService.setSecondaryStage(stage);
+
         stage = new Stage();
         stage.setScene(new Scene(root));
+
+        // Title and Icon of the Application
+        String resourcePath = Objects.requireNonNull(getClass().getResource("/assets/logo/logo.png")).toString();
+        Image icon = new Image(resourcePath);
+        stage.getIcons().add(icon);
+        stage.setTitle("Circuit Designer");
+
         stage.show();
     }
 }

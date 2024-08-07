@@ -28,6 +28,15 @@ public class HomePage extends Application {
         //Setting the Scene and showing the Stage
         stage.setScene(scene);
         stage.show();
+
+        EventController eventController = fxmlLoader.getController();
+
+        StageService stageService = new StageService();
+        eventController.setPrimaryStage(stage);
+        eventController.setStageService(stageService);
+
+
+
     }
 
     public static void main(String[] args) {
