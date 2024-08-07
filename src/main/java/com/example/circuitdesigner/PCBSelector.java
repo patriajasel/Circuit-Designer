@@ -7,7 +7,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.stage.Stage;
 
@@ -45,8 +44,9 @@ public class PCBSelector implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
+        // Declaring the list in the choice box
         sizesChoiceBox.getItems().addAll(sizes);
-        sizesChoiceBox.setValue(sizes[0]);
+        sizesChoiceBox.setValue(sizes[0]); // Setting size[0] as the first value of the choice box
 
     }
 
@@ -54,10 +54,12 @@ public class PCBSelector implements Initializable {
     private Parent root;
     private StageService stageService;
 
+    // Setter for setting stage service
     public void setStageService(StageService stageService) {
         this.stageService = stageService;
     }
 
+    // Switching to SketchBoard window and closing the Homepage Window
     public void switchToSketchBoard(ActionEvent event) throws IOException {
 
         stageService.getPrimaryStage().close();
@@ -68,6 +70,7 @@ public class PCBSelector implements Initializable {
 
     }
 
+    // Removing PCB window but retaining the Homepage Window
     public void cancelCurrentWindow (ActionEvent event) throws IOException {
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("PCBSelector.fxml")));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();

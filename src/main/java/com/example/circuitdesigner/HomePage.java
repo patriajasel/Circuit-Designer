@@ -29,13 +29,13 @@ public class HomePage extends Application {
         stage.setScene(scene);
         stage.show();
 
+        // Creating instance of the EventController class
         EventController eventController = fxmlLoader.getController();
 
+        // Passing Homepage stage as primary stage and stage service to Stage service constructor
         StageService stageService = new StageService();
         eventController.setPrimaryStage(stage);
         eventController.setStageService(stageService);
-
-
 
     }
 

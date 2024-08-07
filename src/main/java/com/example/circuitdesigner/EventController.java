@@ -1,15 +1,14 @@
 package com.example.circuitdesigner;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -51,7 +50,7 @@ public class EventController{
         }
     }
 
-    public void onButtonHoverExit(MouseEvent e) {
+    public void onButtonHoverExit() {
         descriptLabel.setText(descriptions[0]); // default Label value after button was hovered
     }
 
@@ -59,21 +58,23 @@ public class EventController{
     /* S C E N E   S W I T C H I N G   M E T H O D S */
 
     private Stage stage;
-    private Parent root;
     private StageService stageService;
 
+
+    // Setter for setting primary Stage
     public void setPrimaryStage(Stage primaryStage){
         this.stage = primaryStage;
 
     }
 
+    // Setter for setting stage service
     public void setStageService (StageService stageService) {
         this.stageService = stageService;
         stageService.setPrimaryStage(stage);
 
     }
 
-    public void switchToPCBSize(ActionEvent event) throws IOException {
+    public void switchToPCBSize() throws IOException {
         /* This line of code retrieves the current stage (window). This is useful when you need to manipulate the current stage, such as closing it, resizing it, or showing a dialog from it.
         stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
         */
@@ -83,12 +84,16 @@ public class EventController{
          */
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("PCBSelector.fxml"));
-        root = loader.load();
+        Parent root = loader.load();
+
+        // Passing PCB selector stage as secondary stage and stage service to Stage service constructor
         PCBSelector pcbSelector = loader.getController();
         pcbSelector.setStageService(stageService);
         stageService.setSecondaryStage(stage);
 
+
         stage = new Stage();
+        stage.initModality(Modality.APPLICATION_MODAL); // Preventing Homepage window from being accessed while this window is open
         stage.setScene(new Scene(root));
 
         // Title and Icon of the Application
