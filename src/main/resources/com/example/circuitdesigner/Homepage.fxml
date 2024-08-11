@@ -7,54 +7,58 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane fx:id="homePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.circuitdesigner.EventController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" stylesheets="@../../../css/Application.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.circuitdesigner.EventController">
    <children>
-      <ImageView fitHeight="600.0" fitWidth="1000.0" pickOnBounds="true">
-         <image>
-            <Image url="@../../../assets/background/background.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="logo" fitHeight="120.0" fitWidth="120.0" layoutX="50.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true" translateZ="1.0">
-         <image>
-            <Image url="@../../../assets/logo/logo.png" />
-         </image>
-      </ImageView>
-      <Label id="appTitle" fx:id="appTitle" layoutX="191.0" layoutY="62.0" stylesheets="@../../../css/Application.css" text="PCB SKETCH" textAlignment="CENTER" textFill="aliceblue">
-         <font>
-            <Font name="Segoe UI Black" size="50.0" />
-         </font>
-      </Label>
-      <AnchorPane fx:id="optionsPane" layoutX="555.0" layoutY="218.0" prefHeight="343.0" prefWidth="391.0" stylesheets="@../../../css/Application.css">
+      <AnchorPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label id="optionsTitle" fx:id="optionsTitle" layoutX="4.0" layoutY="32.0" prefHeight="18.0" prefWidth="385.0" stylesheets="@../../../css/Application.css" text="Begin your Project" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="4.0" />
-            <Button fx:id="createButton" alignment="CENTER" layoutX="76.0" layoutY="100.0" mnemonicParsing="false" onAction="#switchToPCBSize" onMouseEntered="#onButtonHover" onMouseExited="#onButtonHoverExit" stylesheets="@../../../css/Application.css" text="Create your Design" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0">
-               <graphic>
-                  <FontAwesomeIconView fill="#fffdfd" glyphName="PENCIL" selectionFill="#fcfcfc" size="16" />
-               </graphic>
-            </Button>
-            <Button fx:id="importButton" alignment="CENTER" layoutX="76.0" layoutY="179.0" mnemonicParsing="false" onMouseEntered="#onButtonHover" onMouseExited="#onButtonHoverExit" stylesheets="@../../../css/Application.css" text="Import your Design" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0">
-               <graphic>
-                  <FontAwesomeIconView fill="WHITE" glyphName="UPLOAD" size="16" />
-               </graphic>
-            </Button>
-            <Button fx:id="controlButton" alignment="CENTER" layoutX="76.0" layoutY="260.0" mnemonicParsing="false" onMouseEntered="#onButtonHover" onMouseExited="#onButtonHoverExit" stylesheets="@../../../css/Application.css" text="CNC Controls" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="260.0">
-               <graphic>
-                  <FontAwesomeIconView fill="WHITE" glyphName="GEARS" size="16" />
-               </graphic>
-            </Button>
-            <Separator layoutX="24.0" layoutY="76.0" prefHeight="4.0" prefWidth="351.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
-         </children>
-      </AnchorPane>
-      <AnchorPane id="descriptPane" layoutX="50.0" layoutY="243.0" prefHeight="262.0" prefWidth="385.0" stylesheets="@../../../css/Application.css">
-         <children>
-            <Label id="descriptLabel" fx:id="descriptLabel" layoutX="28.0" layoutY="25.0" prefHeight="249.0" prefWidth="373.0" text="PCB Sketch is a free to use software for PCB footprint designing, PCB engraving and PCB drilling." textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="28.0" AnchorPane.rightAnchor="28.0">
+            <ImageView fitHeight="600.0" fitWidth="1000.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../../assets/background/background.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="logo" fitHeight="120.0" fitWidth="120.0" layoutX="50.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true" translateZ="1.0">
+               <image>
+                  <Image url="@../../../assets/logo/logo.png" />
+               </image>
+            </ImageView>
+            <Label id="appTitle" fx:id="appTitle" layoutX="191.0" layoutY="62.0" stylesheets="@../../../css/Application.css" text="PCB SKETCH" textAlignment="CENTER" textFill="aliceblue">
                <font>
-                  <Font name="Cascadia Mono Regular" size="12.0" />
-               </font></Label>
+                  <Font name="Segoe UI Black" size="50.0" />
+               </font>
+            </Label>
+            <AnchorPane fx:id="optionsPane" layoutX="555.0" layoutY="218.0" prefHeight="343.0" prefWidth="391.0" stylesheets="@../../../css/Application.css">
+               <children>
+                  <Label id="optionsTitle" fx:id="optionsTitle" layoutX="4.0" layoutY="32.0" prefHeight="18.0" prefWidth="385.0" stylesheets="@../../../css/Application.css" text="Begin your Project" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="4.0" />
+                  <Button fx:id="createButton" alignment="CENTER" layoutX="76.0" layoutY="100.0" mnemonicParsing="false" onAction="#switchToPCBSize" onMouseEntered="#onButtonHover" onMouseExited="#onButtonHoverExit" stylesheets="@../../../css/Application.css" text="Create your Design" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0">
+                     <graphic>
+                        <FontAwesomeIconView fill="#fffdfd" glyphName="PENCIL" selectionFill="#fcfcfc" size="16" />
+                     </graphic>
+                  </Button>
+                  <Button fx:id="importButton" alignment="CENTER" layoutX="76.0" layoutY="179.0" mnemonicParsing="false" onMouseEntered="#onButtonHover" onMouseExited="#onButtonHoverExit" stylesheets="@../../../css/Application.css" text="Import your Design" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="UPLOAD" size="16" />
+                     </graphic>
+                  </Button>
+                  <Button fx:id="controlButton" alignment="CENTER" layoutX="76.0" layoutY="260.0" mnemonicParsing="false" onMouseEntered="#onButtonHover" onMouseExited="#onButtonHoverExit" stylesheets="@../../../css/Application.css" text="CNC Controls" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="260.0">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="GEARS" size="16" />
+                     </graphic>
+                  </Button>
+                  <Separator layoutX="24.0" layoutY="76.0" prefHeight="4.0" prefWidth="351.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane id="descriptPane" layoutX="50.0" layoutY="243.0" prefHeight="262.0" prefWidth="385.0" stylesheets="@../../../css/Application.css">
+               <children>
+                  <Label id="descriptLabel" fx:id="descriptLabel" layoutX="28.0" layoutY="25.0" prefHeight="249.0" prefWidth="373.0" text="PCB Sketch is a free to use software for PCB footprint designing, PCB engraving and PCB drilling." textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="28.0" AnchorPane.rightAnchor="28.0">
+                     <font>
+                        <Font name="Cascadia Mono Regular" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
          </children>
       </AnchorPane>
    </children>
-</Pane>
+</AnchorPane>

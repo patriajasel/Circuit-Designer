@@ -15,6 +15,6 @@
             <Font size="16.0" />
          </font>
       </Label>
-      <ChoiceBox fx:id="sizesChoiceBox" layoutX="95.0" layoutY="105.0" prefWidth="150.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" />
+      <ChoiceBox fx:id="sizesChoiceBox" layoutX="95.0" layoutY="105.0" prefWidth="150.0" stylesheets="@../../../css/Application.css" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" />
    </children>
 </AnchorPane>

@@ -83,3 +83,26 @@
     -fx-font-size: 12px;
     -fx-padding: 10px;
 }
+
+#middleSizedButtons {
+    -fx-pref-width: 200;
+    -fx-pref-height: 20;
+    -fx-font-size: 16px;
+    -fx-padding: 10px;
+}
+
+#circularButtons {
+    -fx-pref-width: 40;
+    -fx-pref-height: 40;
+    -fx-border-radius: 50%;
+    -fx-background-radius: 50%;
+}
+
+#sketchBackground {
+    -fx-background-color: #808080;
+}
+
+#sketchboard {
+    -fx-background-color: #ffffff;
+}
+

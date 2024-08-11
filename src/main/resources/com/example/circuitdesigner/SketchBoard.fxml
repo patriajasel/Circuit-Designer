@@ -1,14 +1,183 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.circuitdesigner.SketchBoard"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.circuitdesigner.SketchBoard">
+   <children>
+      <MenuBar layoutY="2.0" prefWidth="1080.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#newProject" text="New Project">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="N" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false" onAction="#openProject" text="Open Project">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="O" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#saveProject" text="Save Project">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="S" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false" onAction="#saveProjectAs" text="Save Project As...">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="S" control="DOWN" meta="UP" shift="DOWN" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#importProject" text="Import">
+                     <accelerator>
+                        <KeyCodeCombination alt="DOWN" code="I" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false" onAction="#exportProject" text="Export">
+                     <accelerator>
+                        <KeyCodeCombination alt="DOWN" code="E" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#exitApp" text="Exit">
+                     <accelerator>
+                        <KeyCodeCombination alt="DOWN" code="F4" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#undoAction" text="Undo">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="Z" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false" onAction="#redoAction" text="Redo">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="Z" control="DOWN" meta="UP" shift="DOWN" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false" onAction="#startTracing" text="Trace">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="T" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Settings">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#openConfiguration" text="Open Configuration..." />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#aboutUs" text="About Us" />
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <SplitPane dividerPositions="0.20500927643784786" layoutY="27.0" prefHeight="693.0" prefWidth="1080.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="27.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="250.0" SplitPane.resizableWithParent="false">
+               <children>
+                  <TextField layoutX="14.0" layoutY="30.0" prefHeight="25.0" prefWidth="190.0" promptText="Search for components..." AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+                  <MenuButton id="menuButton" layoutX="10.0" layoutY="69.0" mnemonicParsing="false" stylesheets="@../../../css/Application.css" text="All Components">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Action 1" />
+                      <MenuItem mnemonicParsing="false" text="Action 2" />
+                    </items>
+                  </MenuButton>
+                  <GridPane hgap="20.0" layoutX="9.0" layoutY="107.0" prefHeight="500.0" prefWidth="200.0" vgap="20.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Button mnemonicParsing="false" prefHeight="90.0" prefWidth="89.0" text="Component 1" />
+                        <Button mnemonicParsing="false" prefHeight="90.0" prefWidth="89.0" text="Component 2" GridPane.columnIndex="1" />
+                        <Button mnemonicParsing="false" prefHeight="90.0" prefWidth="89.0" text="Component 3" GridPane.rowIndex="1" />
+                        <Button mnemonicParsing="false" prefHeight="90.0" prefWidth="89.0" text="Component 4" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Button mnemonicParsing="false" prefHeight="90.0" prefWidth="89.0" text="Component 5" GridPane.rowIndex="2" />
+                        <Button mnemonicParsing="false" prefHeight="90.0" prefWidth="89.0" text="Component 6" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Button mnemonicParsing="false" prefHeight="90.0" prefWidth="89.0" text="Component 7" GridPane.rowIndex="3" />
+                        <Button mnemonicParsing="false" prefHeight="90.0" prefWidth="89.0" text="Component 8" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Button mnemonicParsing="false" prefHeight="90.0" prefWidth="89.0" text="Component 9" GridPane.rowIndex="4" />
+                        <Button mnemonicParsing="false" prefHeight="90.0" prefWidth="89.0" text="Component 10" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+          <AnchorPane fx:id="sketchBackground" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" stylesheets="@../../../css/Application.css">
+               <children>
+                  <StackPane layoutY="-1.0" prefHeight="691.0" prefWidth="822.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-1.0">
+                     <children>
+                        <AnchorPane fx:id="sketchboard" maxHeight="400.0" maxWidth="400.0" prefHeight="400.0" prefWidth="400.0">
+                           <children>
+                              <Canvas fx:id="canvas" height="418.0" width="453.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </StackPane>
+                  <Button id="middleSizedButtons" layoutX="359.0" layoutY="619.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="184.0" stylesheets="@../../../css/Application.css" text="Generate Gerber" AnchorPane.bottomAnchor="27.0" AnchorPane.rightAnchor="263.0" />
+                  <Button id="middleSizedButtons" layoutX="582.0" layoutY="619.0" mnemonicParsing="false" stylesheets="@../../../css/Application.css" text="Proceed to Controller" AnchorPane.bottomAnchor="27.0" AnchorPane.rightAnchor="40.0" />
+                  <Button id="circularButtons" layoutX="767.0" layoutY="22.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" stylesheets="@../../../css/Application.css" AnchorPane.rightAnchor="25.0">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="HOME" size="20" />
+                     </graphic>
+                  </Button>
+                  <Button id="circularButtons" layoutX="767.0" layoutY="61.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" stylesheets="@../../../css/Application.css" AnchorPane.rightAnchor="25.0">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="REFRESH" size="20" />
+                     </graphic>
+                  </Button>
+                  <Button id="circularButtons" layoutX="767.0" layoutY="99.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" stylesheets="@../../../css/Application.css" AnchorPane.rightAnchor="25.0">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="EXPAND" size="20" />
+                     </graphic>
+                  </Button>
+                  <Button id="circularButtons" layoutX="767.0" layoutY="137.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" stylesheets="@../../../css/Application.css" AnchorPane.rightAnchor="25.0">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="TRASH" size="20" />
+                     </graphic>
+                  </Button>
+                  <Button id="circularButtons" layoutX="767.0" layoutY="176.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" stylesheets="@../../../css/Application.css" AnchorPane.rightAnchor="25.0">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="PENCIL" size="20" />
+                     </graphic>
+                  </Button>
+                  <Button id="circularButtons" layoutX="767.0" layoutY="214.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" stylesheets="@../../../css/Application.css" AnchorPane.rightAnchor="25.0">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="SQUARE" size="20" />
+                     </graphic>
+                  </Button>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
 </AnchorPane>

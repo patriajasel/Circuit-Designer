@@ -9,6 +9,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.Objects;
 
+
 public class HomePage extends Application {
     @Override
     public void start(Stage stage) throws IOException {
@@ -27,9 +28,10 @@ public class HomePage extends Application {
 
         //Setting the Scene and showing the Stage
         stage.setScene(scene);
+        stage.setResizable(false);
         stage.show();
 
-        // Creating instance of the EventController class
+        // Creating instance of the EventController classx
         EventController eventController = fxmlLoader.getController();
 
         // Passing Homepage stage as primary stage and stage service to Stage service constructor

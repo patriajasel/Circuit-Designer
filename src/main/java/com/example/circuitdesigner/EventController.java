@@ -14,6 +14,13 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.Objects;
 
+/*  N O T E S
+
+     * open a file explorer on import button
+     * open a new window for cnc controls
+
+ */
+
 public class EventController{
 
     /* F O R   B U T T O N   E F F E C T S */
@@ -95,6 +102,7 @@ public class EventController{
         stage = new Stage();
         stage.initModality(Modality.APPLICATION_MODAL); // Preventing Homepage window from being accessed while this window is open
         stage.setScene(new Scene(root));
+        stage.setResizable(false);
 
         // Title and Icon of the Application
         String resourcePath = Objects.requireNonNull(getClass().getResource("/assets/logo/logo.png")).toString();

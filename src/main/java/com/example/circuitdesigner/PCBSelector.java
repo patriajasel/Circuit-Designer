@@ -66,6 +66,7 @@ public class PCBSelector implements Initializable {
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("SketchBoard.fxml")));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setScene(new Scene(root));
+        stage.setMaximized(true); // Maximizing Window on start
         stage.show();
 
     }

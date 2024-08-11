@@ -4,11 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7b4f7446-ab4e-4ce7-a7d6-1899c4058e07" name="Changes" comment="Selecting PCB Sizes window (Completed)&#10;&#10;/Minor changes needed&#10;* Smooth transition from Homepage.&#10;* Add Button event handlers.">
+    <list default="true" id="7b4f7446-ab4e-4ce7-a7d6-1899c4058e07" name="Changes" comment="Selecting PCB Sizes window (Complete)&#10;/Minor changes needed&#10;* Smooth transition from Homepage. (Done)&#10;* Add Button event handlers. (Done)&#10;* Do not remove primary stage when opening the PCB Size stage (Done)&#10;* Prevent access to Homepage Window while PCB size window is open (Done)&#10;* Add comments on new added codes (Done)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/circuitdesigner/EventController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/circuitdesigner/EventController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/circuitdesigner/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/circuitdesigner/HomePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/circuitdesigner/PCBSelector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/circuitdesigner/PCBSelector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/circuitdesigner/SketchBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/circuitdesigner/SketchBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/circuitdesigner/Homepage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/circuitdesigner/Homepage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/circuitdesigner/PCBSelector.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/circuitdesigner/PCBSelector.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/circuitdesigner/SketchBoard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/circuitdesigner/SketchBoard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/css/Application.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/css/Application.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,13 +119,22 @@
       <option name="project" value="LOCAL" />
       <updated>1722922870887</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Selecting PCB Sizes window (In progress)&#10;/Minor changes needed&#10;* Smooth transition from Homepage. (Done)&#10;* Add Button event handlers. (Done)&#10;* Do not remove primary stage when opening the PCB Size stage (Done)&#10;* Prevent access to Homepage Window while PCB size window is open (Done)&#10;* Add comments on new added codes (Done)">
+      <option name="closed" value="true" />
+      <created>1723045360915</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1723045360916</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Homepage Complete with need of minor updates for their function" />
     <MESSAGE value="Selecting PCB Sizes window (Completed)&#10;&#10;/Minor changes needed&#10;* Smooth transition from Homepage.&#10;* Add Button event handlers.&#10;* Stop Homepage from popping when navigating to PCB selecting page." />
     <MESSAGE value="Selecting PCB Sizes window (Completed)&#10;&#10;/Minor changes needed&#10;* Smooth transition from Homepage.&#10;* Add Button event handlers." />
-    <option name="LAST_COMMIT_MESSAGE" value="Selecting PCB Sizes window (Completed)&#10;&#10;/Minor changes needed&#10;* Smooth transition from Homepage.&#10;* Add Button event handlers." />
+    <MESSAGE value="Selecting PCB Sizes window (In progress)&#10;/Minor changes needed&#10;* Smooth transition from Homepage. (Done)&#10;* Add Button event handlers. (Done)&#10;* Do not remove primary stage when opening the PCB Size stage (Done)&#10;* Prevent access to Homepage Window while PCB size window is open (Done)&#10;* Add comments on new added codes (Done)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Selecting PCB Sizes window (In progress)&#10;/Minor changes needed&#10;* Smooth transition from Homepage. (Done)&#10;* Add Button event handlers. (Done)&#10;* Do not remove primary stage when opening the PCB Size stage (Done)&#10;* Prevent access to Homepage Window while PCB size window is open (Done)&#10;* Add comments on new added codes (Done)" />
   </component>
 </project>
