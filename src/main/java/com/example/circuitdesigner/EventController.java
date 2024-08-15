@@ -1,18 +1,25 @@
 package com.example.circuitdesigner;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.FileChooser;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
+import java.io.File;
 import java.io.IOException;
+import java.net.URL;
 import java.util.Objects;
+import java.util.ResourceBundle;
 
 /*  N O T E S
 
@@ -21,7 +28,12 @@ import java.util.Objects;
 
  */
 
-public class EventController{
+public class EventController implements Initializable {
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        fileChooser.setInitialDirectory(new File("C:\\Users\\Jasel\\Documents")); // make this directory code applicable to any users and not just me
+    }
 
     /* F O R   B U T T O N   E F F E C T S */
 
@@ -63,6 +75,8 @@ public class EventController{
 
 
     /* S C E N E   S W I T C H I N G   M E T H O D S */
+
+    // For Sketch Board Scene
 
     private Stage stage;
     private StageService stageService;
@@ -112,4 +126,26 @@ public class EventController{
 
         stage.show();
     }
+
+
+    // For Import File Scene
+
+    FileChooser fileChooser = new FileChooser();
+
+    public void importFile() {
+        File file = fileChooser.showOpenDialog(new Stage());
+    }
+
+
+    // For CNC Controls
+
+    public void switchToCNCControls(ActionEvent event) throws IOException {
+        stageService.getPrimaryStage().close();
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("CNCControls.fxml")));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setScene(new Scene(root));
+        stage.setMaximized(true); // Maximizing Window on start
+        stage.show();
+    }
+
 }

@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7b4f7446-ab4e-4ce7-a7d6-1899c4058e07" name="Changes" comment="Selecting PCB Sizes window (Complete)&#10;/Minor changes needed&#10;* Smooth transition from Homepage. (Done)&#10;* Add Button event handlers. (Done)&#10;* Do not remove primary stage when opening the PCB Size stage (Done)&#10;* Prevent access to Homepage Window while PCB size window is open (Done)&#10;* Add comments on new added codes (Done)">
+    <list default="true" id="7b4f7446-ab4e-4ce7-a7d6-1899c4058e07" name="Changes" comment="Sketch board window design (complete)&#10;&#10;*Minor adjustments needed*&#10;&#10;1. Ruler or grid background&#10;2. button component designs&#10;3. add more options in the menu bar">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/circuitdesigner/EventController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/circuitdesigner/EventController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/circuitdesigner/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/circuitdesigner/HomePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/circuitdesigner/PCBSelector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/circuitdesigner/PCBSelector.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/circuitdesigner/SketchBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/circuitdesigner/SketchBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/circuitdesigner/StageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/circuitdesigner/StageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/circuitdesigner/CNCControls.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/circuitdesigner/CNCControls.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/circuitdesigner/Homepage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/circuitdesigner/Homepage.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/circuitdesigner/PCBSelector.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/circuitdesigner/PCBSelector.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/circuitdesigner/SketchBoard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/circuitdesigner/SketchBoard.fxml" afterDir="false" />
@@ -127,7 +129,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723045360916</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Sketch board window design (complete)&#10;&#10;*Minor adjustments needed*&#10;&#10;1. Ruler or grid background&#10;2. button component designs&#10;3. add more options in the menu bar">
+      <option name="closed" value="true" />
+      <created>1723340254441</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1723340254441</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -135,6 +145,7 @@
     <MESSAGE value="Selecting PCB Sizes window (Completed)&#10;&#10;/Minor changes needed&#10;* Smooth transition from Homepage.&#10;* Add Button event handlers.&#10;* Stop Homepage from popping when navigating to PCB selecting page." />
     <MESSAGE value="Selecting PCB Sizes window (Completed)&#10;&#10;/Minor changes needed&#10;* Smooth transition from Homepage.&#10;* Add Button event handlers." />
     <MESSAGE value="Selecting PCB Sizes window (In progress)&#10;/Minor changes needed&#10;* Smooth transition from Homepage. (Done)&#10;* Add Button event handlers. (Done)&#10;* Do not remove primary stage when opening the PCB Size stage (Done)&#10;* Prevent access to Homepage Window while PCB size window is open (Done)&#10;* Add comments on new added codes (Done)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Selecting PCB Sizes window (In progress)&#10;/Minor changes needed&#10;* Smooth transition from Homepage. (Done)&#10;* Add Button event handlers. (Done)&#10;* Do not remove primary stage when opening the PCB Size stage (Done)&#10;* Prevent access to Homepage Window while PCB size window is open (Done)&#10;* Add comments on new added codes (Done)" />
+    <MESSAGE value="Sketch board window design (complete)&#10;&#10;*Minor adjustments needed*&#10;&#10;1. Ruler or grid background&#10;2. button component designs&#10;3. add more options in the menu bar" />
+    <option name="LAST_COMMIT_MESSAGE" value="Sketch board window design (complete)&#10;&#10;*Minor adjustments needed*&#10;&#10;1. Ruler or grid background&#10;2. button component designs&#10;3. add more options in the menu bar" />
   </component>
 </project>

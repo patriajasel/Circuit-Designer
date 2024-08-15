@@ -106,3 +106,16 @@
     -fx-background-color: #ffffff;
 }
 
+#manualControlsButton {
+    -fx-pref-width: 200;
+    -fx-pref-height: 40;
+    -fx-font-size: 14px;
+    -fx-padding: 10 30 10 30;
+}
+
+#jogControlsButton {
+    -fx-pref-width: 40;
+    -fx-pref-height: 40;
+    -fx-padding: 0 0 0 0;
+}
+

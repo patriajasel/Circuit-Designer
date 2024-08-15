@@ -8,6 +8,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -17,13 +18,15 @@ import java.util.ResourceBundle;
 
 public class PCBSelector implements Initializable {
 
+    @FXML
+    private TextField projectName;
+
     /* F O R   C H O I C E   B O X E S */
 
     @FXML
     private ChoiceBox<String> sizesChoiceBox;
 
     private final String[] sizes = {
-            "2 x 2 inches (51 x 51 mm)",
             "2 x 4 inches (51 x 102 mm)",
             "2 x 5 inches (51 x 127 mm)",
             "2 x 6 inches (51 x 152 mm)",
@@ -62,11 +65,24 @@ public class PCBSelector implements Initializable {
     // Switching to SketchBoard window and closing the Homepage Window
     public void switchToSketchBoard(ActionEvent event) throws IOException {
 
+        //Closing the first window
         stageService.getPrimaryStage().close();
-        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("SketchBoard.fxml")));
+
+        // Loading the new window
+        FXMLLoader loader = new FXMLLoader(Objects.requireNonNull(getClass().getResource("SketchBoard.fxml")));
+        root = loader.load();
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        // Setting the sketch board size based on the user's choice
+        SketchBoard sketchBoardWindow = loader.getController();
+        System.out.println(sketchBoardWindow);
+        sketchBoardWindow.setAnchorSize(10, 4);
+
+        // Setting the scene for the new window
         stage.setScene(new Scene(root));
+        stage.setResizable(true);
         stage.setMaximized(true); // Maximizing Window on start
+        stage.setTitle(projectName.getText());
         stage.show();
 
     }

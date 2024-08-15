@@ -1,5 +1,11 @@
 package com.example.circuitdesigner;
 
+import javafx.fxml.FXML;
+import javafx.geometry.Rectangle2D;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Screen;
+
+
 public class SketchBoard {
 
     /* N O T E S
@@ -11,6 +17,29 @@ public class SketchBoard {
     */
 
     /* F I L E   M E N U */
+
+    // For SketchBoard Size
+
+    @FXML
+    AnchorPane sketchboard;
+
+    public void setAnchorSize(double prefWidth, double prefHeight ) {
+
+        Screen primaryScreen = Screen.getPrimary();
+
+        Rectangle2D bounds = primaryScreen.getVisualBounds();
+
+        double screenWidth = bounds.getWidth();
+        double screenHeight = bounds.getHeight();
+        double dpi = Screen.getPrimary().getDpi();
+
+        double anchorPaneWidth = prefWidth * dpi;
+        double anchorPaneHeight = prefHeight * dpi;
+
+        sketchboard.setPrefWidth(anchorPaneWidth);
+        sketchboard.setPrefHeight(anchorPaneHeight);
+
+    }
 
     // For creating new project
     public void newProject() {}
@@ -70,6 +99,5 @@ public class SketchBoard {
     public void trace() {}
 
     public void outline() {}
-
 
 }

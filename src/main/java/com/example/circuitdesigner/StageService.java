@@ -4,6 +4,12 @@ import javafx.stage.Stage;
 
 public class StageService {
 
+    /* N O T E S
+
+        * Remove secondary stage
+
+     */
+
     private Stage primaryStage;
     private Stage secondaryStage;
 

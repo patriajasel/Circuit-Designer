@@ -134,9 +134,9 @@
             </AnchorPane>
           <AnchorPane fx:id="sketchBackground" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" stylesheets="@../../../css/Application.css">
                <children>
-                  <StackPane layoutY="-1.0" prefHeight="691.0" prefWidth="822.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-1.0">
+                  <StackPane prefHeight="691.0" prefWidth="822.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
-                        <AnchorPane fx:id="sketchboard" maxHeight="400.0" maxWidth="400.0" prefHeight="400.0" prefWidth="400.0">
+                        <AnchorPane fx:id="sketchboard" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity">
                            <children>
                               <Canvas fx:id="canvas" height="418.0" width="453.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                            </children>
@@ -145,34 +145,34 @@
                   </StackPane>
                   <Button id="middleSizedButtons" layoutX="359.0" layoutY="619.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="184.0" stylesheets="@../../../css/Application.css" text="Generate Gerber" AnchorPane.bottomAnchor="27.0" AnchorPane.rightAnchor="263.0" />
                   <Button id="middleSizedButtons" layoutX="582.0" layoutY="619.0" mnemonicParsing="false" stylesheets="@../../../css/Application.css" text="Proceed to Controller" AnchorPane.bottomAnchor="27.0" AnchorPane.rightAnchor="40.0" />
-                  <Button id="circularButtons" layoutX="767.0" layoutY="22.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" stylesheets="@../../../css/Application.css" AnchorPane.rightAnchor="25.0">
+                  <Button id="circularButtons" layoutX="757.0" layoutY="41.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" stylesheets="@../../../css/Application.css" AnchorPane.rightAnchor="25.0">
                      <graphic>
-                        <FontAwesomeIconView glyphName="HOME" size="20" />
+                        <FontAwesomeIconView fill="WHITE" glyphName="HOME" size="20" />
                      </graphic>
                   </Button>
-                  <Button id="circularButtons" layoutX="767.0" layoutY="61.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" stylesheets="@../../../css/Application.css" AnchorPane.rightAnchor="25.0">
+                  <Button id="circularButtons" layoutX="757.0" layoutY="99.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" stylesheets="@../../../css/Application.css" AnchorPane.rightAnchor="25.0">
                      <graphic>
-                        <FontAwesomeIconView glyphName="REFRESH" size="20" />
+                        <FontAwesomeIconView fill="WHITE" glyphName="REFRESH" size="20" />
                      </graphic>
                   </Button>
-                  <Button id="circularButtons" layoutX="767.0" layoutY="99.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" stylesheets="@../../../css/Application.css" AnchorPane.rightAnchor="25.0">
+                  <Button id="circularButtons" layoutX="757.0" layoutY="157.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" stylesheets="@../../../css/Application.css" AnchorPane.rightAnchor="25.0">
                      <graphic>
-                        <FontAwesomeIconView glyphName="EXPAND" size="20" />
+                        <FontAwesomeIconView fill="WHITE" glyphName="EXPAND" size="20" />
                      </graphic>
                   </Button>
-                  <Button id="circularButtons" layoutX="767.0" layoutY="137.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" stylesheets="@../../../css/Application.css" AnchorPane.rightAnchor="25.0">
+                  <Button id="circularButtons" layoutX="757.0" layoutY="214.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" stylesheets="@../../../css/Application.css" AnchorPane.rightAnchor="25.0">
                      <graphic>
-                        <FontAwesomeIconView glyphName="TRASH" size="20" />
+                        <FontAwesomeIconView fill="WHITE" glyphName="TRASH" size="20" />
                      </graphic>
                   </Button>
-                  <Button id="circularButtons" layoutX="767.0" layoutY="176.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" stylesheets="@../../../css/Application.css" AnchorPane.rightAnchor="25.0">
+                  <Button id="circularButtons" layoutX="757.0" layoutY="269.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" stylesheets="@../../../css/Application.css" AnchorPane.rightAnchor="25.0">
                      <graphic>
-                        <FontAwesomeIconView glyphName="PENCIL" size="20" />
+                        <FontAwesomeIconView fill="WHITE" glyphName="PENCIL" size="20" />
                      </graphic>
                   </Button>
-                  <Button id="circularButtons" layoutX="767.0" layoutY="214.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" stylesheets="@../../../css/Application.css" AnchorPane.rightAnchor="25.0">
+                  <Button id="circularButtons" layoutX="757.0" layoutY="326.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" stylesheets="@../../../css/Application.css" AnchorPane.rightAnchor="25.0">
                      <graphic>
-                        <FontAwesomeIconView glyphName="SQUARE" size="20" />
+                        <FontAwesomeIconView fill="WHITE" glyphName="SQUARE" size="20" />
                      </graphic>
                   </Button>
                </children>

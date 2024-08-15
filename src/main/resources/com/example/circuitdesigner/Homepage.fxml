@@ -36,12 +36,12 @@
                         <FontAwesomeIconView fill="#fffdfd" glyphName="PENCIL" selectionFill="#fcfcfc" size="16" />
                      </graphic>
                   </Button>
-                  <Button fx:id="importButton" alignment="CENTER" layoutX="76.0" layoutY="179.0" mnemonicParsing="false" onMouseEntered="#onButtonHover" onMouseExited="#onButtonHoverExit" stylesheets="@../../../css/Application.css" text="Import your Design" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0">
+                  <Button fx:id="importButton" alignment="CENTER" layoutX="76.0" layoutY="179.0" mnemonicParsing="false" onAction="#importFile" onMouseEntered="#onButtonHover" onMouseExited="#onButtonHoverExit" stylesheets="@../../../css/Application.css" text="Import your Design" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0">
                      <graphic>
                         <FontAwesomeIconView fill="WHITE" glyphName="UPLOAD" size="16" />
                      </graphic>
                   </Button>
-                  <Button fx:id="controlButton" alignment="CENTER" layoutX="76.0" layoutY="260.0" mnemonicParsing="false" onMouseEntered="#onButtonHover" onMouseExited="#onButtonHoverExit" stylesheets="@../../../css/Application.css" text="CNC Controls" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="260.0">
+                  <Button fx:id="controlButton" alignment="CENTER" layoutX="76.0" layoutY="260.0" mnemonicParsing="false" onAction="#switchToCNCControls" onMouseEntered="#onButtonHover" onMouseExited="#onButtonHoverExit" stylesheets="@../../../css/Application.css" text="CNC Controls" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="260.0">
                      <graphic>
                         <FontAwesomeIconView fill="WHITE" glyphName="GEARS" size="16" />
                      </graphic>

@@ -9,6 +9,12 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.Objects;
 
+/*  N O T E S
+
+    * Optimize the loaders into just one method
+
+ */
+
 
 public class HomePage extends Application {
     @Override
@@ -31,7 +37,7 @@ public class HomePage extends Application {
         stage.setResizable(false);
         stage.show();
 
-        // Creating instance of the EventController classx
+        // Creating instance of the EventController class
         EventController eventController = fxmlLoader.getController();
 
         // Passing Homepage stage as primary stage and stage service to Stage service constructor
