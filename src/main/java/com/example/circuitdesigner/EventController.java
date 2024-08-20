@@ -110,7 +110,6 @@ public class EventController implements Initializable {
         // Passing PCB selector stage as secondary stage and stage service to Stage service constructor
         PCBSelector pcbSelector = loader.getController();
         pcbSelector.setStageService(stageService);
-        stageService.setSecondaryStage(stage);
 
 
         stage = new Stage();

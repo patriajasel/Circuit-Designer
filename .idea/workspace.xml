@@ -4,48 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7b4f7446-ab4e-4ce7-a7d6-1899c4058e07" name="Changes" comment="Sizing the sketch board done (need accurate pcb sizes)">
+    <list default="true" id="7b4f7446-ab4e-4ce7-a7d6-1899c4058e07" name="Changes" comment="Secondary Stage (removed)">
       <change afterPath="$PROJECT_DIR$/src/main/java/com/example/circuitdesigner/LBRSTAXParser.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/example/circuitdesigner/Package.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/footprints/SparkFun-Aesthetics.lbr" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/footprints/SparkFun-Batteries.lbr" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/footprints/SparkFun-Boards.lbr" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/footprints/SparkFun-Buzzard.lbr" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/footprints/SparkFun-Capacitors.lbr" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/footprints/SparkFun-Clocks.lbr" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/footprints/SparkFun-Coils.lbr" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/footprints/SparkFun-Connectors.lbr" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/footprints/SparkFun-DiscreteSemi.lbr" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/footprints/SparkFun-Displays.lbr" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/footprints/SparkFun-Electromechanical.lbr" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/footprints/SparkFun-Fuses.lbr" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/footprints/SparkFun-GPS.lbr" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/footprints/SparkFun-Hardware.lbr" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/footprints/SparkFun-IC-Amplifiers.lbr" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/footprints/SparkFun-IC-Comms.lbr" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/footprints/SparkFun-IC-Conversion.lbr" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/footprints/SparkFun-IC-Logic.lbr" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/footprints/SparkFun-IC-Memory.lbr" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/footprints/SparkFun-IC-Microcontroller.lbr" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/footprints/SparkFun-IC-Power.lbr" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/footprints/SparkFun-IC-Special-Function.lbr" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/footprints/SparkFun-Jumpers.lbr" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/footprints/SparkFun-LED.lbr" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/footprints/SparkFun-MicroMod.lbr" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/footprints/SparkFun-PowerSymbols.lbr" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/footprints/SparkFun-RF.lbr" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/footprints/SparkFun-Resistors.lbr" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/footprints/SparkFun-Retired.lbr" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/footprints/SparkFun-Sensors.lbr" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/footprints/SparkFun-Switches.lbr" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/footprints/User-Submitted.lbr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/circuitdesigner/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/circuitdesigner/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/circuitdesigner/PCBSelector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/circuitdesigner/PCBSelector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/circuitdesigner/SketchBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/circuitdesigner/SketchBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/circuitdesigner/SketchBoard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/circuitdesigner/SketchBoard.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,7 +139,31 @@
       <option name="project" value="LOCAL" />
       <updated>1723721891597</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Sizing the sketch board done (completed)">
+      <option name="closed" value="true" />
+      <created>1724136713413</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1724136713413</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Sizing the sketch board done (completed)">
+      <option name="closed" value="true" />
+      <created>1724136817300</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1724136817300</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Secondary Stage (removed)">
+      <option name="closed" value="true" />
+      <created>1724136937319</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1724136937319</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -188,7 +173,9 @@
     <MESSAGE value="Selecting PCB Sizes window (In progress)&#10;/Minor changes needed&#10;* Smooth transition from Homepage. (Done)&#10;* Add Button event handlers. (Done)&#10;* Do not remove primary stage when opening the PCB Size stage (Done)&#10;* Prevent access to Homepage Window while PCB size window is open (Done)&#10;* Add comments on new added codes (Done)" />
     <MESSAGE value="Sketch board window design (complete)&#10;&#10;*Minor adjustments needed*&#10;&#10;1. Ruler or grid background&#10;2. button component designs&#10;3. add more options in the menu bar" />
     <MESSAGE value="Sizing the sketch board done (need accurate pcb sizes)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sizing the sketch board done (need accurate pcb sizes)" />
+    <MESSAGE value="Sizing the sketch board done (completed)" />
+    <MESSAGE value="Secondary Stage (removed)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Secondary Stage (removed)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
