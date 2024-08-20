@@ -12,11 +12,9 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.lang.foreign.SymbolLookup;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
-import java.util.ResourceBundle;
+import java.util.*;
 
 public class PCBSelector implements Initializable {
 
@@ -61,7 +59,6 @@ public class PCBSelector implements Initializable {
     // Switching to SketchBoard window and closing the Homepage Window
     public void switchToSketchBoard(ActionEvent event) throws IOException {
 
-
         //Closing the first window
         stageService.getPrimaryStage().close();
 
@@ -70,9 +67,8 @@ public class PCBSelector implements Initializable {
         root = loader.load();
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
-        SketchBoard sketchBoardWindow = loader.getController();
-
         // Sending the index of the choice box value
+        SketchBoard sketchBoardWindow = loader.getController();
         setCanvasSize(PcbSizes.indexOf(sizesChoiceBox.getValue()), sketchBoardWindow);
 
         //sketchBoardWindow.populateComponents();
@@ -97,8 +93,6 @@ public class PCBSelector implements Initializable {
     public void setCanvasSize(int index, SketchBoard sketchBoardWindow) {
 
         // Setting the sketch board size based on the user's choice
-
-        System.out.println(sketchBoardWindow);
         sketchBoardWindow.setAnchorSize(PcbWidth[index], PcbHeight[index]);
     }
 

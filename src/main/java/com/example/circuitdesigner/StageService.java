@@ -14,4 +14,7 @@ public class StageService {
     public Stage getPrimaryStage() {
         return primaryStage; // Added method to get primary stage
     }
+
+    
+
 }

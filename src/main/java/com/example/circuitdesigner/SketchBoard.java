@@ -1,27 +1,58 @@
 package com.example.circuitdesigner;
 
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Screen;
 
+import java.io.File;
+import java.net.URL;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.ResourceBundle;
 
 
-public class SketchBoard {
+public class SketchBoard implements Initializable {
 
     /* N O T E S
 
     * buttons designs
     * menu button designs
-    * make a ruler for the sketch board in vertical and horizontal
 
     */
 
     /* F I L E   M E N U */
 
     // For SketchBoard Size
+
+    private final List<String> filePaths = new ArrayList<>();
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        String compFolderPath = "src/main/resources/Component-Libraries";
+        File folder = new File(compFolderPath);
+
+        scanFolder(folder, filePaths);
+
+    }
+
+    public static void scanFolder(File folder, List<String> filePaths) {
+        if(folder.isDirectory()) {
+            File[] files = folder.listFiles();
+
+            if (files != null) {
+                for(File file: files) {
+                    if(file.isDirectory()) {
+                        scanFolder(file, filePaths);
+                    } else {
+                        filePaths.add(file.getPath());
+                    }
+                }
+            }
+        }
+    }
 
     @FXML
     AnchorPane sketchboard;
@@ -112,5 +143,6 @@ public class SketchBoard {
     public void trace() {}
 
     public void outline() {}
+
 
 }

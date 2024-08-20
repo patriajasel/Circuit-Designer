@@ -7,6 +7,10 @@
     <list default="true" id="7b4f7446-ab4e-4ce7-a7d6-1899c4058e07" name="Changes" comment="Secondary Stage (removed)">
       <change afterPath="$PROJECT_DIR$/src/main/java/com/example/circuitdesigner/LBRSTAXParser.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/example/circuitdesigner/Package.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/circuitdesigner/PCBSelector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/circuitdesigner/PCBSelector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/circuitdesigner/SketchBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/circuitdesigner/SketchBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/circuitdesigner/StageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/circuitdesigner/StageService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,7 +167,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724136937319</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Secondary Stage (removed)">
+      <option name="closed" value="true" />
+      <created>1724137061636</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1724137061636</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
