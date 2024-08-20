@@ -3,7 +3,10 @@ package com.example.circuitdesigner;
 import javafx.fxml.FXML;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.GridPane;
 import javafx.stage.Screen;
+
+import java.util.List;
 
 
 public class SketchBoard {
@@ -39,6 +42,16 @@ public class SketchBoard {
         sketchboard.setPrefWidth(anchorPaneWidth);
         sketchboard.setPrefHeight(anchorPaneHeight);
 
+    }
+
+    @FXML
+    private GridPane compsContainer;
+
+    public void populateComponents(List<Package> packageList) {
+
+        for(int i = 0; i < packageList.size(); i++){
+            compsContainer.add(packageList.get(i), 0, 1);
+        }
     }
 
     // For creating new project

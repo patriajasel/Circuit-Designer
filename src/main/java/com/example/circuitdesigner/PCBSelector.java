@@ -13,6 +13,8 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
@@ -26,30 +28,24 @@ public class PCBSelector implements Initializable {
     @FXML
     private ChoiceBox<String> sizesChoiceBox;
 
-    private final String[] sizes = {
-            "2 x 4 inches (51 x 102 mm)",
-            "2 x 5 inches (51 x 127 mm)",
-            "2 x 6 inches (51 x 152 mm)",
-            "4 x 2 inches (102 x 51 mm)",
-            "4 x 4 inches (102 x 102 mm)",
-            "4 x 5 inches (102 x 127 mm)",
-            "4 x 6 inches (102 x 152 mm)",
-            "5 x 2 inches (127 x 51 mm)",
-            "5 x 4 inches (127 x 102 mm)",
-            "5 x 5 inches (127 x 127 mm)",
-            "5 x 6 inches (127 x 152 mm)",
-            "6 x 2 inches (152 x 51 mm)",
-            "6 x 4 inches (152 x 102 mm)",
-            "6 x 5 inches (152 x 127 mm)",
-            "6 x 6 inches (152 x 152 mm)",
-    };
+    private final int[] PcbHeight = {2, 2, 2, 3, 3, 4, 4};
+    private final int[] PcbWidth = {2, 3, 4, 3, 4, 4, 6};
+
+    private final List<String> PcbSizes = new ArrayList<>();
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
+
+        for (int i = 0; i < PcbWidth.length; i++) {
+            String size = PcbHeight[i] + " x " + PcbWidth[i] + " inches";
+            PcbSizes.add(size);
+        }
+
         // Declaring the list in the choice box
-        sizesChoiceBox.getItems().addAll(sizes);
-        sizesChoiceBox.setValue(sizes[0]); // Setting size[0] as the first value of the choice box
+        sizesChoiceBox.getItems().addAll(PcbSizes);
+        sizesChoiceBox.setValue(PcbSizes.getFirst()); // Setting size[0] as the first value of the choice box
 
     }
 
@@ -65,6 +61,7 @@ public class PCBSelector implements Initializable {
     // Switching to SketchBoard window and closing the Homepage Window
     public void switchToSketchBoard(ActionEvent event) throws IOException {
 
+
         //Closing the first window
         stageService.getPrimaryStage().close();
 
@@ -73,10 +70,12 @@ public class PCBSelector implements Initializable {
         root = loader.load();
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
-        // Setting the sketch board size based on the user's choice
         SketchBoard sketchBoardWindow = loader.getController();
-        System.out.println(sketchBoardWindow);
-        sketchBoardWindow.setAnchorSize(10, 4);
+
+        // Sending the index of the choice box value
+        setCanvasSize(PcbSizes.indexOf(sizesChoiceBox.getValue()), sketchBoardWindow);
+
+        //sketchBoardWindow.populateComponents();
 
         // Setting the scene for the new window
         stage.setScene(new Scene(root));
@@ -93,6 +92,14 @@ public class PCBSelector implements Initializable {
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setScene(new Scene(root));
         stage.close();
+    }
+
+    public void setCanvasSize(int index, SketchBoard sketchBoardWindow) {
+
+        // Setting the sketch board size based on the user's choice
+
+        System.out.println(sketchBoardWindow);
+        sketchBoardWindow.setAnchorSize(PcbWidth[index], PcbHeight[index]);
     }
 
 }

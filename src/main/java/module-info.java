@@ -6,7 +6,8 @@ module com.example.circuitdesigner {
     requires com.dlsc.formsfx;
     requires org.kordamp.bootstrapfx.core;
     requires java.desktop;
+    requires com.fasterxml.jackson.databind;
+    opens com.example.circuitdesigner to javafx.fxml, com.fasterxml.jackson.databind;
 
-    opens com.example.circuitdesigner to javafx.fxml;
     exports com.example.circuitdesigner;
 }

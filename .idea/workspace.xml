@@ -4,18 +4,48 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7b4f7446-ab4e-4ce7-a7d6-1899c4058e07" name="Changes" comment="Sketch board window design (complete)&#10;&#10;*Minor adjustments needed*&#10;&#10;1. Ruler or grid background&#10;2. button component designs&#10;3. add more options in the menu bar">
+    <list default="true" id="7b4f7446-ab4e-4ce7-a7d6-1899c4058e07" name="Changes" comment="Sizing the sketch board done (need accurate pcb sizes)">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/circuitdesigner/LBRSTAXParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/circuitdesigner/Package.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/footprints/SparkFun-Aesthetics.lbr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/footprints/SparkFun-Batteries.lbr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/footprints/SparkFun-Boards.lbr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/footprints/SparkFun-Buzzard.lbr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/footprints/SparkFun-Capacitors.lbr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/footprints/SparkFun-Clocks.lbr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/footprints/SparkFun-Coils.lbr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/footprints/SparkFun-Connectors.lbr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/footprints/SparkFun-DiscreteSemi.lbr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/footprints/SparkFun-Displays.lbr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/footprints/SparkFun-Electromechanical.lbr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/footprints/SparkFun-Fuses.lbr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/footprints/SparkFun-GPS.lbr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/footprints/SparkFun-Hardware.lbr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/footprints/SparkFun-IC-Amplifiers.lbr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/footprints/SparkFun-IC-Comms.lbr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/footprints/SparkFun-IC-Conversion.lbr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/footprints/SparkFun-IC-Logic.lbr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/footprints/SparkFun-IC-Memory.lbr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/footprints/SparkFun-IC-Microcontroller.lbr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/footprints/SparkFun-IC-Power.lbr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/footprints/SparkFun-IC-Special-Function.lbr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/footprints/SparkFun-Jumpers.lbr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/footprints/SparkFun-LED.lbr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/footprints/SparkFun-MicroMod.lbr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/footprints/SparkFun-PowerSymbols.lbr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/footprints/SparkFun-RF.lbr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/footprints/SparkFun-Resistors.lbr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/footprints/SparkFun-Retired.lbr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/footprints/SparkFun-Sensors.lbr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/footprints/SparkFun-Switches.lbr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/footprints/User-Submitted.lbr" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/circuitdesigner/EventController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/circuitdesigner/EventController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/circuitdesigner/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/circuitdesigner/HomePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/circuitdesigner/PCBSelector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/circuitdesigner/PCBSelector.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/circuitdesigner/SketchBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/circuitdesigner/SketchBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/circuitdesigner/StageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/circuitdesigner/StageService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/circuitdesigner/CNCControls.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/circuitdesigner/CNCControls.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/circuitdesigner/Homepage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/circuitdesigner/Homepage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/circuitdesigner/PCBSelector.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/circuitdesigner/PCBSelector.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/circuitdesigner/SketchBoard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/circuitdesigner/SketchBoard.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/css/Application.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/css/Application.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +103,7 @@
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_directory_selection&quot;: &quot;C:/Users/Jasel/IdeaProjects/CircuitDesigner/src/main/java/com/example/circuitdesigner&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/JavaFx SDK/openjfx-22.0.2_windows-x64_bin-sdk/javafx-sdk-22.0.2/lib&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Jasel/IdeaProjects/CircuitDesigner/src/main/resources/assets/footprints&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
@@ -81,6 +111,9 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Jasel\IdeaProjects\CircuitDesigner\src\main\resources\assets\footprints" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Jasel\IdeaProjects\CircuitDesigner\src\main\resources\assets" />
       <recent name="C:\Users\Jasel\IdeaProjects\CircuitDesigner\src\main\resources" />
@@ -137,7 +170,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723340254441</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Sizing the sketch board done (need accurate pcb sizes)">
+      <option name="closed" value="true" />
+      <created>1723721891597</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1723721891597</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -146,6 +187,17 @@
     <MESSAGE value="Selecting PCB Sizes window (Completed)&#10;&#10;/Minor changes needed&#10;* Smooth transition from Homepage.&#10;* Add Button event handlers." />
     <MESSAGE value="Selecting PCB Sizes window (In progress)&#10;/Minor changes needed&#10;* Smooth transition from Homepage. (Done)&#10;* Add Button event handlers. (Done)&#10;* Do not remove primary stage when opening the PCB Size stage (Done)&#10;* Prevent access to Homepage Window while PCB size window is open (Done)&#10;* Add comments on new added codes (Done)" />
     <MESSAGE value="Sketch board window design (complete)&#10;&#10;*Minor adjustments needed*&#10;&#10;1. Ruler or grid background&#10;2. button component designs&#10;3. add more options in the menu bar" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sketch board window design (complete)&#10;&#10;*Minor adjustments needed*&#10;&#10;1. Ruler or grid background&#10;2. button component designs&#10;3. add more options in the menu bar" />
+    <MESSAGE value="Sizing the sketch board done (need accurate pcb sizes)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Sizing the sketch board done (need accurate pcb sizes)" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.io.FileNotFoundException" package="java.io" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

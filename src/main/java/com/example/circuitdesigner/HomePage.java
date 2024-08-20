@@ -6,7 +6,6 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
-import java.io.IOException;
 import java.util.Objects;
 
 /*  N O T E S
@@ -15,10 +14,9 @@ import java.util.Objects;
 
  */
 
-
 public class HomePage extends Application {
     @Override
-    public void start(Stage stage) throws IOException {
+    public void start(Stage stage) throws Exception {
         FXMLLoader fxmlLoader = new FXMLLoader(HomePage.class.getResource("Homepage.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
 
@@ -44,6 +42,9 @@ public class HomePage extends Application {
         StageService stageService = new StageService();
         eventController.setPrimaryStage(stage);
         eventController.setStageService(stageService);
+
+        /*LBRSTAXParser parser = new LBRSTAXParser();
+        parser.parseLBRData("src/main/resources/assets/footprints/User-Submitted.lbr", "src/main/resources/Component-Libraries/User-Submitted.json");*/
 
     }
 
