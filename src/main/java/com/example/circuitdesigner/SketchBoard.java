@@ -12,6 +12,7 @@ import javafx.scene.text.FontPosture;
 import javafx.scene.text.FontWeight;
 import javafx.stage.Screen;
 
+import javax.swing.event.ChangeListener;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
@@ -44,6 +45,9 @@ public class SketchBoard implements Initializable {
         scanFolder(folder, filePaths, fileNames);
 
         parsingJSONCompFiles(filePaths);
+
+        compsMenu.setMinWidth(130);
+        compsMenu.setMaxWidth(130);
 
     }
 
@@ -91,17 +95,27 @@ public class SketchBoard implements Initializable {
         ObjectMapper objectMapper = new ObjectMapper();
         Package pkg;
 
+        MenuItem allComps = new MenuItem("All Components");
+        compsMenu.getItems().add(allComps);
+        allComps.setOnAction(event -> {
+            compsMenu.setText(allComps.getText());
+            compsContainer.getChildren().clear();
+            compsMenu.getItems().clear();
+            parsingJSONCompFiles(filePaths);
+        });
+
         try {
             for(int i = 0; i < filePaths.size(); i++) {
                 pkg = objectMapper.readValue(new File(filePaths.get(i)), Package.class);
                 populateGridPaneComps(pkg);
-                populateCompMenu(pkg.packageType);
+                populateCompMenu(pkg.packageType, pkg);
             }
 
         } catch (IOException e) {
             e.printStackTrace();
 
         }
+
     }
 
     @FXML
@@ -143,16 +157,25 @@ public class SketchBoard implements Initializable {
             compButton.setMaxHeight(100);
             compButton.setText(pkg.components.get(index).name);
             components.add(compButton,i,j);
+
         }
 
     }
 
     @FXML
     MenuButton compsMenu;
-    public void populateCompMenu(String packageType){
+    public void populateCompMenu(String packageType, Package pkg){
         MenuItem pkgType = new MenuItem();
         pkgType.setText(packageType);
+
+        pkgType.setOnAction(event -> {
+            compsMenu.setText(packageType);
+            compsContainer.getChildren().clear();
+            populateGridPaneComps(pkg);
+        });
+
         compsMenu.getItems().add(pkgType);
+
     }
 
     // For creating new project
