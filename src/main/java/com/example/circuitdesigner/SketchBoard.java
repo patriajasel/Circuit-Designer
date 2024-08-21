@@ -118,6 +118,7 @@ public class SketchBoard implements Initializable {
 
     }
 
+
     @FXML
     private VBox compsContainer;
 
@@ -156,8 +157,13 @@ public class SketchBoard implements Initializable {
             compButton.setMaxWidth(100);
             compButton.setMaxHeight(100);
             compButton.setText(pkg.components.get(index).name);
-            components.add(compButton,i,j);
+            int finalIndex = index;
+            compButton.setOnAction(event -> {
+                FootprintGenerator fg = new FootprintGenerator();
+                fg.drawFootprint(sketchboard, pkg.components.get(finalIndex));
+            });
 
+            components.add(compButton,i,j);
         }
 
     }
@@ -231,7 +237,9 @@ public class SketchBoard implements Initializable {
 
     public void expand() {}
 
-    public void delete() {}
+    public void delete() {
+        sketchboard.getChildren().clear();
+    }
 
     public void trace() {}
 

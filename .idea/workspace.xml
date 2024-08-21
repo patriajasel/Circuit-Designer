@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7b4f7446-ab4e-4ce7-a7d6-1899c4058e07" name="Changes" comment="Populating Menu Items done&#10;&#10;Add event listeners">
+    <list default="true" id="7b4f7446-ab4e-4ce7-a7d6-1899c4058e07" name="Changes" comment="Populating Menu Items and filtering (Complete)">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/circuitdesigner/FootprintGenerator.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/example/circuitdesigner/LBRSTAXParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/circuitdesigner/SketchBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/circuitdesigner/SketchBoard.java" afterDir="false" />
@@ -212,7 +213,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724239717448</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Populating Menu Items and filtering (Complete)">
+      <option name="closed" value="true" />
+      <created>1724254712091</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1724254712091</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -229,7 +238,8 @@
     <MESSAGE value="Populating Grid Pane partially done&#10;&#10;Add design to the buttons and Labels" />
     <MESSAGE value="Populating Grid Pane complete&#10;&#10;Add design to the buttons and Labels" />
     <MESSAGE value="Populating Menu Items done&#10;&#10;Add event listeners" />
-    <option name="LAST_COMMIT_MESSAGE" value="Populating Menu Items done&#10;&#10;Add event listeners" />
+    <MESSAGE value="Populating Menu Items and filtering (Complete)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Populating Menu Items and filtering (Complete)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -161,7 +161,7 @@
                         <FontAwesomeIconView fill="WHITE" glyphName="EXPAND" size="20" />
                      </graphic>
                   </Button>
-                  <Button id="circularButtons" layoutX="757.0" layoutY="214.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" stylesheets="@../../../css/Application.css" AnchorPane.rightAnchor="25.0">
+                  <Button id="circularButtons" layoutX="757.0" layoutY="214.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#delete" stylesheets="@../../../css/Application.css" AnchorPane.rightAnchor="25.0">
                      <graphic>
                         <FontAwesomeIconView fill="WHITE" glyphName="TRASH" size="20" />
                      </graphic>
