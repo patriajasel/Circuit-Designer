@@ -6,41 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="7b4f7446-ab4e-4ce7-a7d6-1899c4058e07" name="Changes" comment="Populating Grid Pane partially done&#10;&#10;Add design to the buttons and Labels">
       <change afterPath="$PROJECT_DIR$/src/main/java/com/example/circuitdesigner/LBRSTAXParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/circuitdesigner/Package.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/circuitdesigner/SketchBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/circuitdesigner/SketchBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Component-Libraries/Aesthetics.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Component-Libraries/Aesthetics.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Component-Libraries/Batteries.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Component-Libraries/Batteries.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Component-Libraries/Boards.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Component-Libraries/Boards.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Component-Libraries/Buzzard.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Component-Libraries/Buzzard.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Component-Libraries/Capacitors.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Component-Libraries/Capacitors.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Component-Libraries/Clocks.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Component-Libraries/Clocks.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Component-Libraries/Coils.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Component-Libraries/Coils.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Component-Libraries/Connectors.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Component-Libraries/Connectors.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Component-Libraries/DiscreteSemi.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Component-Libraries/DiscreteSemi.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Component-Libraries/Displays.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Component-Libraries/Displays.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Component-Libraries/Electromechanical.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Component-Libraries/Electromechanical.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Component-Libraries/Fuses.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Component-Libraries/Fuses.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Component-Libraries/GPS.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Component-Libraries/GPS.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Component-Libraries/Hardware.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Component-Libraries/Hardware.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Component-Libraries/IC-Amplifiers.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Component-Libraries/IC-Amplifiers.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Component-Libraries/IC-Comms.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Component-Libraries/IC-Comms.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Component-Libraries/IC-Conversion.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Component-Libraries/IC-Conversion.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Component-Libraries/IC-Logic.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Component-Libraries/IC-Logic.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Component-Libraries/IC-Memory.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Component-Libraries/IC-Memory.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Component-Libraries/IC-Microcontroller.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Component-Libraries/IC-Microcontroller.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Component-Libraries/IC-Power.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Component-Libraries/IC-Power.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Component-Libraries/IC-Special-Function.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Component-Libraries/IC-Special-Function.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Component-Libraries/Jumpers.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Component-Libraries/Jumpers.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Component-Libraries/LED.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Component-Libraries/LED.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Component-Libraries/MicroMod.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Component-Libraries/MicroMod.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Component-Libraries/PowerSymbols.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Component-Libraries/PowerSymbols.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Component-Libraries/RF.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Component-Libraries/RF.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Component-Libraries/Resistors.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Component-Libraries/Resistors.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Component-Libraries/Retired.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Component-Libraries/Retired.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Component-Libraries/Sensors.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Component-Libraries/Sensors.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Component-Libraries/Switches.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Component-Libraries/Switches.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Component-Libraries/User-Submitted.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Component-Libraries/User-Submitted.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/circuitdesigner/SketchBoard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/circuitdesigner/SketchBoard.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -89,23 +56,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.HomePage.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_directory_selection&quot;: &quot;C:/Users/Jasel/IdeaProjects/CircuitDesigner/src/main/java/com/example/circuitdesigner&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Jasel/IdeaProjects/CircuitDesigner/src/main/resources/assets/footprints&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;inlay.hints&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.HomePage.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_directory_selection": "C:/Users/Jasel/IdeaProjects/CircuitDesigner/src/main/java/com/example/circuitdesigner",
+    "last_opened_file_path": "C:/Users/Jasel/IdeaProjects/CircuitDesigner/src/main/resources/assets/footprints",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "inlay.hints"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Jasel\IdeaProjects\CircuitDesigner\src\main\resources\assets\footprints" />

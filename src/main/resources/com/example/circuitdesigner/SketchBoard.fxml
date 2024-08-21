@@ -131,9 +131,9 @@
                       <MenuItem mnemonicParsing="false" text="Action 2" />
                     </items>
                   </MenuButton>
-                  <ScrollPane layoutX="10.0" layoutY="107.0" prefHeight="575.0" prefWidth="230.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="106.0">
+                  <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="10.0" layoutY="107.0" prefHeight="575.0" prefWidth="230.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="106.0">
                      <content>
-                        <VBox fx:id="compsContainer" prefHeight="571.0" prefWidth="228.0" />
+                        <VBox fx:id="compsContainer" prefHeight="582.0" prefWidth="247.0" />
                      </content>
                   </ScrollPane>
                </children>

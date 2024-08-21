@@ -3,14 +3,16 @@ package com.example.circuitdesigner;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.geometry.Insets;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.Separator;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.VBox;
+import javafx.scene.layout.*;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontPosture;
+import javafx.scene.text.FontWeight;
 import javafx.stage.Screen;
 
 import java.io.File;
@@ -98,8 +100,6 @@ public class SketchBoard implements Initializable {
                 populateGridPaneComps(pkg);
             }
 
-
-
         } catch (IOException e) {
             e.printStackTrace();
 
@@ -112,22 +112,40 @@ public class SketchBoard implements Initializable {
     public void populateGridPaneComps(Package pkg) {
 
         GridPane components = new GridPane();
+
+        Label compType = new Label(pkg.packageType);
+        compType.setFont(Font.font("Arial", FontWeight.BOLD, FontPosture.REGULAR, 16));
+        compType.setPadding(new Insets(5,5,5,5));
+
+        Separator compSeparator = new Separator();
+        compSeparator.setMinHeight(4);
+        compSeparator.setPadding(new Insets(0,5,0,5));
+
         compsContainer.getChildren().addAll(
-            new Label(pkg.packageType),
-            new Separator(),
-            components
+                compType,
+                compSeparator,
+                components
         );
 
         components.setPrefSize(230, 575);
         components.setHgap(10);
         components.setVgap(10);
+        components.setPadding(new Insets(10,10,10,10));
 
-        for (int i = 0; i < 2; i++) {
-            for (int j = 0; j < pkg.components.size()/2; j++){
-                components.add(new Button(pkg.components.get(j).name), i, j);
-            }
+        int numColumns = 2;
+
+        for (int index = 0; index < pkg.components.size(); index++) {
+            int i = index % numColumns;
+            int j = index / numColumns;
+
+            Button compButton = new Button();
+            compButton.setMinWidth(100);
+            compButton.setMinHeight(100);
+            compButton.setMaxWidth(100);
+            compButton.setMaxHeight(100);
+            compButton.setText(pkg.components.get(index).name);
+            components.add(compButton,i,j);
         }
-
 
     }
 
