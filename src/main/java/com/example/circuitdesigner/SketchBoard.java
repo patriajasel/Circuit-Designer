@@ -115,7 +115,7 @@ public class SketchBoard implements Initializable {
 
         Label compType = new Label(pkg.packageType);
         compType.setFont(Font.font("Arial", FontWeight.BOLD, FontPosture.REGULAR, 16));
-        compType.setPadding(new Insets(5,5,5,5));
+        compType.setPadding(new Insets(10,10,10,10));
 
         Separator compSeparator = new Separator();
         compSeparator.setMinHeight(4);
