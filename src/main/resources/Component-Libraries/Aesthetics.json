@@ -1,5 +1,6 @@
 {
-  "Aesthetics": [
+  "packageType": "Aesthetics",
+  "components": [
     {
       "name": "CREATIVE_COMMONS",
       "wires": [],

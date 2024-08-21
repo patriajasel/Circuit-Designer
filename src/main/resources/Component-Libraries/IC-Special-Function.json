@@ -1,5 +1,6 @@
 {
-  "IC-Special-Function": [
+  "packageType": "IC-Special-Function",
+  "components": [
     {
       "name": "SO08",
       "wires": [

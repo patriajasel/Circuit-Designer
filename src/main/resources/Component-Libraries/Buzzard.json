@@ -1,5 +1,6 @@
 {
-  "Buzzard": [
+  "packageType": "Buzzard",
+  "components": [
     {
       "name": "3V3_P",
       "wires": [],

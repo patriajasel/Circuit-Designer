@@ -1,5 +1,6 @@
 {
-  "GPS": [
+  "packageType": "GPS",
+  "components": [
     {
       "name": "ANT-GPS-2X8MM",
       "wires": [

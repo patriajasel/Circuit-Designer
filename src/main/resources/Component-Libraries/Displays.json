@@ -1,5 +1,6 @@
 {
-  "Displays": [
+  "packageType": "Displays",
+  "components": [
     {
       "name": "LCD-16X2",
       "wires": [

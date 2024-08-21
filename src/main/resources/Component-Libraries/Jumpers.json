@@ -1,5 +1,6 @@
 {
-  "Jumpers": [
+  "packageType": "Jumpers",
+  "components": [
     {
       "name": "SMT-JUMPER_2_NO_NO-SILK_ROUND",
       "wires": [],

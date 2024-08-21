@@ -1,5 +1,6 @@
 {
-  "DiscreteSemi": [
+  "packageType": "DiscreteSemi",
+  "components": [
     {
       "name": "SMA-DIODE",
       "wires": [

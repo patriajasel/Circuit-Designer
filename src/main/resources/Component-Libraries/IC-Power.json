@@ -1,5 +1,6 @@
 {
-  "IC-Power": [
+  "packageType": "IC-Power",
+  "components": [
     {
       "name": "DC-DC_CONVERTER",
       "wires": [

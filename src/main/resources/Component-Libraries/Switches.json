@@ -1,5 +1,6 @@
 {
-  "Switches": [
+  "packageType": "Switches",
+  "components": [
     {
       "name": "DIPSWITCH-02-CHS-02A",
       "wires": [

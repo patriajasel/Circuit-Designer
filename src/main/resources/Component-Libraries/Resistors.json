@@ -1,5 +1,6 @@
 {
-  "Resistors": [
+  "packageType": "Resistors",
+  "components": [
     {
       "name": "0805",
       "wires": [

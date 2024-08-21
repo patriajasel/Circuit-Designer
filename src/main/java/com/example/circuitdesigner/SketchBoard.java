@@ -1,13 +1,20 @@
 package com.example.circuitdesigner;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.geometry.Rectangle2D;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.ScrollPane;
+import javafx.scene.control.Separator;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Screen;
 
 import java.io.File;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
@@ -28,26 +35,30 @@ public class SketchBoard implements Initializable {
     // For SketchBoard Size
 
     private final List<String> filePaths = new ArrayList<>();
+    private final List<String> fileNames = new ArrayList<>();
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        String compFolderPath = "src/main/resources/Component-Libraries";
+        final String compFolderPath = "src/main/resources/Component-Libraries";
         File folder = new File(compFolderPath);
 
-        scanFolder(folder, filePaths);
+        scanFolder(folder, filePaths, fileNames);
+
+        parsingJSONCompFiles(filePaths);
 
     }
 
-    public static void scanFolder(File folder, List<String> filePaths) {
+    public static void scanFolder(File folder, List<String> filePaths, List<String> fileNames) {
         if(folder.isDirectory()) {
             File[] files = folder.listFiles();
 
             if (files != null) {
                 for(File file: files) {
                     if(file.isDirectory()) {
-                        scanFolder(file, filePaths);
+                        scanFolder(file, filePaths, fileNames);
                     } else {
                         filePaths.add(file.getPath());
+                        fileNames.add(file.getName());
                     }
                 }
             }
@@ -75,14 +86,49 @@ public class SketchBoard implements Initializable {
 
     }
 
-    @FXML
-    private GridPane compsContainer;
 
-    public void populateComponents(List<Package> packageList) {
 
-        for(int i = 0; i < packageList.size(); i++){
-            compsContainer.add(packageList.get(i), 0, 1);
+    public void parsingJSONCompFiles(List<String> filePaths) {
+        ObjectMapper objectMapper = new ObjectMapper();
+        Package pkg;
+
+        try {
+            for(int i = 0; i < filePaths.size(); i++) {
+                pkg = objectMapper.readValue(new File(filePaths.get(i)), Package.class);
+                populateGridPaneComps(pkg);
+            }
+
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+
         }
+    }
+
+    @FXML
+    private VBox compsContainer;
+
+    public void populateGridPaneComps(Package pkg) {
+
+        GridPane components = new GridPane();
+        compsContainer.getChildren().addAll(
+            new Label(pkg.packageType),
+            new Separator(),
+            components
+        );
+
+        components.setPrefSize(230, 575);
+        components.setHgap(10);
+        components.setVgap(10);
+
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < pkg.components.size()/2; j++){
+                components.add(new Button(pkg.components.get(j).name), i, j);
+            }
+        }
+
+
     }
 
     // For creating new project

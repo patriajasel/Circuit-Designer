@@ -1,5 +1,6 @@
 {
-  "IC-Microcontroller": [
+  "packageType": "IC-Microcontroller",
+  "components": [
     {
       "name": "TQFP32-08",
       "wires": [

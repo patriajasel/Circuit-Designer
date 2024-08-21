@@ -1,5 +1,6 @@
 {
-  "LED": [
+  "packageType": "LED",
+  "components": [
     {
       "name": "LED_5MM",
       "wires": [

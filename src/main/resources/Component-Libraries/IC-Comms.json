@@ -1,5 +1,6 @@
 {
-  "IC-Comms": [
+  "packageType": "IC-Comms",
+  "components": [
     {
       "name": "SSOP28DB",
       "wires": [

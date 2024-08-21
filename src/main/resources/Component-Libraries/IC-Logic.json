@@ -1,5 +1,6 @@
 {
-  "IC-Logic": [
+  "packageType": "IC-Logic",
+  "components": [
     {
       "name": "SOT23-5",
       "wires": [

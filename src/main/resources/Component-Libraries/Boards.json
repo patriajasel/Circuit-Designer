@@ -1,5 +1,6 @@
 {
-  "Boards": [
+  "packageType": "Boards",
+  "components": [
     {
       "name": "ARDUINO_MEGA_NO_SILK",
       "wires": [

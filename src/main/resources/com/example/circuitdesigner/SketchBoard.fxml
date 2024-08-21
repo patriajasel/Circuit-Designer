@@ -7,15 +7,14 @@
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.SeparatorMenuItem?>
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.input.KeyCodeCombination?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
 
 <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.circuitdesigner.SketchBoard">
    <children>
@@ -132,31 +131,11 @@
                       <MenuItem mnemonicParsing="false" text="Action 2" />
                     </items>
                   </MenuButton>
-                  <GridPane fx:id="compsContainer" hgap="20.0" layoutX="9.0" layoutY="107.0" prefHeight="500.0" prefWidth="200.0" vgap="20.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
-                    <columnConstraints>
-                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                    </columnConstraints>
-                    <rowConstraints>
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                    </rowConstraints>
-                     <children>
-                        <Button mnemonicParsing="false" prefHeight="90.0" prefWidth="89.0" text="Component 1" />
-                        <Button mnemonicParsing="false" prefHeight="90.0" prefWidth="89.0" text="Component 2" GridPane.columnIndex="1" />
-                        <Button mnemonicParsing="false" prefHeight="90.0" prefWidth="89.0" text="Component 3" GridPane.rowIndex="1" />
-                        <Button mnemonicParsing="false" prefHeight="90.0" prefWidth="89.0" text="Component 4" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <Button mnemonicParsing="false" prefHeight="90.0" prefWidth="89.0" text="Component 5" GridPane.rowIndex="2" />
-                        <Button mnemonicParsing="false" prefHeight="90.0" prefWidth="89.0" text="Component 6" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                        <Button mnemonicParsing="false" prefHeight="90.0" prefWidth="89.0" text="Component 7" GridPane.rowIndex="3" />
-                        <Button mnemonicParsing="false" prefHeight="90.0" prefWidth="89.0" text="Component 8" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                        <Button mnemonicParsing="false" prefHeight="90.0" prefWidth="89.0" text="Component 9" GridPane.rowIndex="4" />
-                        <Button mnemonicParsing="false" prefHeight="90.0" prefWidth="89.0" text="Component 10" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                     </children>
-                  </GridPane>
+                  <ScrollPane layoutX="10.0" layoutY="107.0" prefHeight="575.0" prefWidth="230.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="106.0">
+                     <content>
+                        <VBox fx:id="compsContainer" prefHeight="571.0" prefWidth="228.0" />
+                     </content>
+                  </ScrollPane>
                </children>
             </AnchorPane>
           <AnchorPane fx:id="sketchBackground" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" stylesheets="@../../../css/Application.css">

@@ -1,5 +1,6 @@
 {
-  "MicroMod": [
+  "packageType": "MicroMod",
+  "components": [
     {
       "name": "M.2-CARD-E-22",
       "wires": [

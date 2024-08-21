@@ -1,5 +1,6 @@
 {
-  "IC-Amplifiers": [
+  "packageType": "IC-Amplifiers",
+  "components": [
     {
       "name": "SO08",
       "wires": [

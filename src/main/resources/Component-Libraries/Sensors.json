@@ -1,5 +1,6 @@
 {
-  "Sensors": [
+  "packageType": "Sensors",
+  "components": [
     {
       "name": "ADMP401",
       "wires": [

@@ -1,5 +1,6 @@
 {
-  "RF": [
+  "packageType": "RF",
+  "components": [
     {
       "name": "ANT-2.4GHZ-9.5X2.0MM",
       "wires": [

@@ -1,5 +1,6 @@
 {
-  "PowerSymbols": [
+  "packageType": "PowerSymbols",
+  "components": [
     {
       "name": "2PT_GND_TIE",
       "wires": [

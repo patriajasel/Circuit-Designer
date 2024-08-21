@@ -1,5 +1,6 @@
 {
-  "Batteries": [
+  "packageType": "Batteries",
+  "components": [
     {
       "name": "BATTERY-AAA",
       "wires": [

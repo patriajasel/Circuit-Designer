@@ -1,5 +1,6 @@
 {
-  "Fuses": [
+  "packageType": "Fuses",
+  "components": [
     {
       "name": "PTH",
       "wires": [

@@ -1,5 +1,6 @@
 {
-  "Electromechanical": [
+  "packageType": "Electromechanical",
+  "components": [
     {
       "name": "BUZZER-12MM",
       "wires": [],

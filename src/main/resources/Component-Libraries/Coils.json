@@ -1,5 +1,6 @@
 {
-  "Coils": [
+  "packageType": "Coils",
+  "components": [
     {
       "name": "0603",
       "wires": [

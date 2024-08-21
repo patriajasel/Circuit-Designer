@@ -1,5 +1,6 @@
 {
-  "IC-Memory": [
+  "packageType": "IC-Memory",
+  "components": [
     {
       "name": "SO08",
       "wires": [

@@ -1,5 +1,6 @@
 {
-  "Capacitors": [
+  "packageType": "Capacitors",
+  "components": [
     {
       "name": "CAP-PTH-2.54",
       "wires": [

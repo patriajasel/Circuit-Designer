@@ -1,5 +1,6 @@
 {
-  "Hardware": [
+  "packageType": "Hardware",
+  "components": [
     {
       "name": "MAGNET-18MM",
       "wires": [],

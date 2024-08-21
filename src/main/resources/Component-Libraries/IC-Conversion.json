@@ -1,5 +1,6 @@
 {
-  "IC-Conversion": [
+  "packageType": "IC-Conversions",
+  "components": [
     {
       "name": "SO08",
       "wires": [
