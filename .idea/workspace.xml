@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7b4f7446-ab4e-4ce7-a7d6-1899c4058e07" name="Changes" comment="Populating Grid Pane partially done&#10;&#10;Add design to the buttons and Labels">
+    <list default="true" id="7b4f7446-ab4e-4ce7-a7d6-1899c4058e07" name="Changes" comment="Populating Grid Pane complete&#10;&#10;Add design to the buttons and Labels">
       <change afterPath="$PROJECT_DIR$/src/main/java/com/example/circuitdesigner/LBRSTAXParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/circuitdesigner/SketchBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/circuitdesigner/SketchBoard.java" afterDir="false" />
@@ -189,7 +189,23 @@
       <option name="project" value="LOCAL" />
       <updated>1724153010611</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Populating Grid Pane complete&#10;&#10;Add design to the buttons and Labels">
+      <option name="closed" value="true" />
+      <created>1724238055030</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1724238055030</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Populating Grid Pane complete&#10;&#10;Add design to the buttons and Labels">
+      <option name="closed" value="true" />
+      <created>1724238118288</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1724238118288</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -204,7 +220,8 @@
     <MESSAGE value="Folder Scanner Complete" />
     <MESSAGE value="JSON Files Formatted Correctly" />
     <MESSAGE value="Populating Grid Pane partially done&#10;&#10;Add design to the buttons and Labels" />
-    <option name="LAST_COMMIT_MESSAGE" value="Populating Grid Pane partially done&#10;&#10;Add design to the buttons and Labels" />
+    <MESSAGE value="Populating Grid Pane complete&#10;&#10;Add design to the buttons and Labels" />
+    <option name="LAST_COMMIT_MESSAGE" value="Populating Grid Pane complete&#10;&#10;Add design to the buttons and Labels" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

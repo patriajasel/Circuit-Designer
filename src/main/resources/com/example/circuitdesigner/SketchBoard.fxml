@@ -125,12 +125,7 @@
           <AnchorPane minHeight="0.0" minWidth="250.0" SplitPane.resizableWithParent="false">
                <children>
                   <TextField layoutX="14.0" layoutY="30.0" prefHeight="25.0" prefWidth="190.0" promptText="Search for components..." AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
-                  <MenuButton id="menuButton" layoutX="10.0" layoutY="69.0" mnemonicParsing="false" stylesheets="@../../../css/Application.css" text="All Components">
-                    <items>
-                      <MenuItem mnemonicParsing="false" text="Action 1" />
-                      <MenuItem mnemonicParsing="false" text="Action 2" />
-                    </items>
-                  </MenuButton>
+                  <MenuButton id="menuButton" fx:id="compsMenu" layoutX="10.0" layoutY="69.0" mnemonicParsing="false" stylesheets="@../../../css/Application.css" text="All Components" />
                   <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="10.0" layoutY="107.0" prefHeight="575.0" prefWidth="230.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="106.0">
                      <content>
                         <VBox fx:id="compsContainer" prefHeight="582.0" prefWidth="247.0" />

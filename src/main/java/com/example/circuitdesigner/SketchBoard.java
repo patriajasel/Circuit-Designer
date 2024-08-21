@@ -5,10 +5,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
 import javafx.geometry.Rectangle2D;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.ScrollPane;
-import javafx.scene.control.Separator;
+import javafx.scene.control.*;
 import javafx.scene.layout.*;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontPosture;
@@ -98,6 +95,7 @@ public class SketchBoard implements Initializable {
             for(int i = 0; i < filePaths.size(); i++) {
                 pkg = objectMapper.readValue(new File(filePaths.get(i)), Package.class);
                 populateGridPaneComps(pkg);
+                populateCompMenu(pkg.packageType);
             }
 
         } catch (IOException e) {
@@ -147,6 +145,14 @@ public class SketchBoard implements Initializable {
             components.add(compButton,i,j);
         }
 
+    }
+
+    @FXML
+    MenuButton compsMenu;
+    public void populateCompMenu(String packageType){
+        MenuItem pkgType = new MenuItem();
+        pkgType.setText(packageType);
+        compsMenu.getItems().add(pkgType);
     }
 
     // For creating new project
