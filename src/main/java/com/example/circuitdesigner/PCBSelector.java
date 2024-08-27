@@ -93,7 +93,9 @@ public class PCBSelector implements Initializable {
     public void setCanvasSize(int index, SketchBoard sketchBoardWindow) {
 
         // Setting the sketch board size based on the user's choice
-        sketchBoardWindow.setAnchorSize(PcbWidth[index], PcbHeight[index]);
+        sketchBoardWindow.setSketchHeight(PcbHeight[index]);
+        sketchBoardWindow.setSketchWidth(PcbWidth[index]);
+        sketchBoardWindow.setAnchorSize();
     }
 
 }

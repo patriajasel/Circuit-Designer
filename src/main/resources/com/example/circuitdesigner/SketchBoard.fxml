@@ -96,12 +96,12 @@
                      </accelerator>
                   </MenuItem>
                   <SeparatorMenuItem mnemonicParsing="false" />
-                  <MenuItem mnemonicParsing="false" text="Zoom In">
+                  <MenuItem mnemonicParsing="false" onAction="#zoomIn" text="Zoom In">
                      <accelerator>
                         <KeyCodeCombination alt="DOWN" code="PLUS" control="UP" meta="UP" shift="UP" shortcut="UP" />
                      </accelerator>
                   </MenuItem>
-                  <MenuItem mnemonicParsing="false" text="Zoom out">
+                  <MenuItem fx:id="zoomOutMenu" mnemonicParsing="false" onAction="#zoomOut" text="Zoom out">
                      <accelerator>
                         <KeyCodeCombination alt="DOWN" code="MINUS" control="UP" meta="UP" shift="UP" shortcut="UP" />
                      </accelerator>

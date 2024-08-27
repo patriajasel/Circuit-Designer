@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7b4f7446-ab4e-4ce7-a7d6-1899c4058e07" name="Changes" comment="Populating Menu Items and filtering (Complete)">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/circuitdesigner/FootprintGenerator.java" afterDir="false" />
+    <list default="true" id="7b4f7446-ab4e-4ce7-a7d6-1899c4058e07" name="Changes" comment="Generating Footprint on Anchor Pane (complete)&#10;&#10;not draggable">
       <change afterPath="$PROJECT_DIR$/src/main/java/com/example/circuitdesigner/LBRSTAXParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/circuitdesigner/PCBSelector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/circuitdesigner/PCBSelector.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/circuitdesigner/SketchBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/circuitdesigner/SketchBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/circuitdesigner/SketchBoard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/circuitdesigner/SketchBoard.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -221,7 +222,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724254712091</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Generating Footprint on Anchor Pane (complete)&#10;&#10;not draggable">
+      <option name="closed" value="true" />
+      <created>1724281058029</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1724281058029</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -239,7 +248,8 @@
     <MESSAGE value="Populating Grid Pane complete&#10;&#10;Add design to the buttons and Labels" />
     <MESSAGE value="Populating Menu Items done&#10;&#10;Add event listeners" />
     <MESSAGE value="Populating Menu Items and filtering (Complete)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Populating Menu Items and filtering (Complete)" />
+    <MESSAGE value="Generating Footprint on Anchor Pane (complete)&#10;&#10;not draggable" />
+    <option name="LAST_COMMIT_MESSAGE" value="Generating Footprint on Anchor Pane (complete)&#10;&#10;not draggable" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -37,6 +37,7 @@ public class SketchBoard implements Initializable {
     private final List<String> filePaths = new ArrayList<>();
     private final List<String> fileNames = new ArrayList<>();
 
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         final String compFolderPath = "src/main/resources/Component-Libraries";
@@ -71,7 +72,31 @@ public class SketchBoard implements Initializable {
     @FXML
     AnchorPane sketchboard;
 
-    public void setAnchorSize(double prefWidth, double prefHeight ) {
+    private double sketchHeight;
+    private double sketchWidth;
+    private double scale = 1;
+
+    public void setScale(double scale) {
+        this.scale = scale;
+    }
+
+    public void setSketchHeight(double sketchHeight) {
+        this.sketchHeight = sketchHeight;
+    }
+
+    public void setSketchWidth(double sketchWidth) {
+        this.sketchWidth = sketchWidth;
+    }
+
+    public double getSketchHeight() {
+        return sketchHeight;
+    }
+
+    public double getSketchWidth() {
+        return sketchWidth;
+    }
+
+    public void setAnchorSize() {
 
         Screen primaryScreen = Screen.getPrimary();
 
@@ -81,8 +106,10 @@ public class SketchBoard implements Initializable {
         double screenHeight = bounds.getHeight();
         double dpi = Screen.getPrimary().getDpi();
 
-        double anchorPaneWidth = prefWidth * dpi;
-        double anchorPaneHeight = prefHeight * dpi;
+        double anchorPaneWidth = (getSketchWidth() * dpi) * scale;
+        double anchorPaneHeight = (getSketchHeight() * dpi) * scale;
+
+        System.out.println(scale);
 
         sketchboard.setPrefWidth(anchorPaneWidth);
         sketchboard.setPrefHeight(anchorPaneHeight);
@@ -216,6 +243,28 @@ public class SketchBoard implements Initializable {
 
     // Start tracing
     public void startTracing() {}
+
+    public void zoomIn(){
+        zoomOutMenu.setDisable(false);
+        if(scale >= 1) {
+            setScale(scale + 0.2);
+            setAnchorSize();
+            //System.out.println("Zoomed In");
+        }
+    }
+
+    @FXML
+    private MenuItem zoomOutMenu;
+
+    public void zoomOut(){
+        if(scale > 1){
+            setScale(scale - 0.2);
+            setAnchorSize();
+            if(scale == 1) {
+                zoomOutMenu.setDisable(true);
+            }
+        }
+    }
 
 
     /* S E T T I N G S   M E N U */
