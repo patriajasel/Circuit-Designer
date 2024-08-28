@@ -7,37 +7,40 @@ import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
+import javafx.scene.transform.Scale;
 
 
 public class FootprintGenerator {
 
-    public void drawFootprint(AnchorPane sketchBoard, Component components) {
+    public void drawFootprint(AnchorPane sketchBoard, Component components, Scale scaleTransform) {
+
+        Pane componentGroup = new Pane();
 
         double offsetX = sketchBoard.getWidth() / 2;
         double offsetY = sketchBoard.getHeight() / 2;
 
-        System.out.println(offsetX);
-        System.out.println(offsetY);
-
         for (int i = 0; i < components.wires.size(); i++) {
-            drawWire(sketchBoard, calculate(components.wires.get(i).x1) + offsetX , calculate(components.wires.get(i).y1) + offsetY, calculate(components.wires.get(i).x2) + offsetX, calculate(components.wires.get(i).y2) + offsetY) ;
+            drawWire(componentGroup, calculate(components.wires.get(i).x1) + offsetX , calculate(components.wires.get(i).y1) + offsetY, calculate(components.wires.get(i).x2) + offsetX, calculate(components.wires.get(i).y2) + offsetY) ;
         }
 
         for (int i = 0; i < components.pads.size(); i++) {
-            drawPad(sketchBoard,calculate(components.pads.get(i).x) + offsetX, calculate(components.pads.get(i).y) + offsetY);
+            drawPad(componentGroup,calculate(components.pads.get(i).x) + offsetX, calculate(components.pads.get(i).y) + offsetY);
         }
 
         for (int i = 0; i < components.texts.size(); i++) {
-            drawText(sketchBoard, "Text", calculate(components.texts.get(i).x) + offsetX, calculate(components.texts.get(i).y) + offsetY);
+            drawText(componentGroup, "Text", calculate(components.texts.get(i).x) + offsetX, calculate(components.texts.get(i).y) + offsetY);
         }
 
+        enableDrag(componentGroup, scaleTransform);
+
+        sketchBoard.getChildren().add(componentGroup);
     }
 
-    public void drawWire(AnchorPane pane, double startX, double startY, double endX, double endY) {
+    public void drawWire(Pane pane, double startX, double startY, double endX, double endY) {
         Line line = new Line(startX, startY, endX, endY);
         line.setStroke(Color.BLACK);
         line.setStrokeWidth(1);
-        pane.getChildren().add(line);;
+        pane.getChildren().add(line);
     }
 
     private void drawPad(Pane pane, double centerX, double centerY) {
@@ -59,7 +62,29 @@ public class FootprintGenerator {
     }
 
     private double calculate(double num) {
+
         return (num / 25.4) * 102;
+    }
+
+    private void enableDrag(Pane pane, Scale scaleTransform) {
+        final double[] offsetX = new double[1];
+        final double[] offsetY = new double[1];
+
+        pane.setOnMousePressed(event -> {
+            double scaleX = scaleTransform.getX();
+            double scaleY = scaleTransform.getY();
+
+            offsetX[0] = (event.getSceneX() - pane.getTranslateX()) / scaleX;
+            offsetY[0] = (event.getSceneY() - pane.getTranslateY()) / scaleY;
+        });
+
+        pane.setOnMouseDragged(event -> {
+            double scaleX = scaleTransform.getX();
+            double scaleY = scaleTransform.getY();
+
+            pane.setTranslateX((event.getSceneX() / scaleX) - offsetX[0]);
+            pane.setTranslateY((event.getSceneY() / scaleY) - offsetY[0]);
+        });
     }
 
 }

@@ -12,7 +12,6 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.lang.foreign.SymbolLookup;
 import java.net.URL;
 import java.util.*;
 
@@ -93,9 +92,7 @@ public class PCBSelector implements Initializable {
     public void setCanvasSize(int index, SketchBoard sketchBoardWindow) {
 
         // Setting the sketch board size based on the user's choice
-        sketchBoardWindow.setSketchHeight(PcbHeight[index]);
-        sketchBoardWindow.setSketchWidth(PcbWidth[index]);
-        sketchBoardWindow.setAnchorSize();
+        sketchBoardWindow.setAnchorSize(PcbHeight[index], PcbWidth[index]);
     }
 
 }

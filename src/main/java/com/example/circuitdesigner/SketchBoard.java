@@ -4,15 +4,15 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
-import javafx.geometry.Rectangle2D;
 import javafx.scene.control.*;
+import javafx.scene.input.ScrollEvent;
 import javafx.scene.layout.*;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontPosture;
 import javafx.scene.text.FontWeight;
+import javafx.scene.transform.Scale;
 import javafx.stage.Screen;
 
-import javax.swing.event.ChangeListener;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
@@ -72,59 +72,57 @@ public class SketchBoard implements Initializable {
     @FXML
     AnchorPane sketchboard;
 
-    private double sketchHeight;
-    private double sketchWidth;
-    private double scale = 1;
+    private double zoomFactor = 1.0;
+    private Scale scaleTransform;
 
-    public void setScale(double scale) {
-        this.scale = scale;
-    }
-
-    public void setSketchHeight(double sketchHeight) {
-        this.sketchHeight = sketchHeight;
-    }
-
-    public void setSketchWidth(double sketchWidth) {
-        this.sketchWidth = sketchWidth;
-    }
-
-    public double getSketchHeight() {
-        return sketchHeight;
-    }
-
-    public double getSketchWidth() {
-        return sketchWidth;
-    }
-
-    public void setAnchorSize() {
+    public void setAnchorSize(double sketchHeight, double sketchWidth) {
 
         Screen primaryScreen = Screen.getPrimary();
 
-        Rectangle2D bounds = primaryScreen.getVisualBounds();
+        //Rectangle2D bounds = primaryScreen.getVisualBounds();
 
-        double screenWidth = bounds.getWidth();
-        double screenHeight = bounds.getHeight();
-        double dpi = Screen.getPrimary().getDpi();
+        //double screenWidth = bounds.getWidth();
+        //double screenHeight = bounds.getHeight();
+        double dpi = primaryScreen.getDpi();
 
-        double anchorPaneWidth = (getSketchWidth() * dpi) * scale;
-        double anchorPaneHeight = (getSketchHeight() * dpi) * scale;
-
-        System.out.println(scale);
+        double anchorPaneWidth = (sketchWidth * dpi);
+        double anchorPaneHeight = (sketchHeight * dpi);
 
         sketchboard.setPrefWidth(anchorPaneWidth);
         sketchboard.setPrefHeight(anchorPaneHeight);
 
+        double offsetX = anchorPaneWidth / 2;
+        double offsetY = anchorPaneWidth / 2;
+
+        scaleTransform = new Scale(zoomFactor, zoomFactor, offsetX, offsetY);
+        sketchboard.getTransforms().add(scaleTransform);
+
+    }
+
+    public void handleZoom(ScrollEvent event) {
+        double zoomDelta = 1;
+        if (event.getDeltaY() > 0) {
+            zoomFactor += zoomDelta;
+        } else {
+            zoomFactor -= zoomDelta;
+            if (zoomFactor < zoomDelta) {
+                zoomFactor = zoomDelta; // Prevent zooming out too far
+            }
+        }
+        scaleTransform.setX(zoomFactor);
+        scaleTransform.setY(zoomFactor);
+
+        System.out.println(scaleTransform);
     }
 
 
-
-    public void parsingJSONCompFiles(List<String> filePaths) {
+    private void parsingJSONCompFiles(List<String> filePaths) {
         ObjectMapper objectMapper = new ObjectMapper();
         Package pkg;
 
         MenuItem allComps = new MenuItem("All Components");
         compsMenu.getItems().add(allComps);
-        allComps.setOnAction(event -> {
+        allComps.setOnAction(_ -> {
             compsMenu.setText(allComps.getText());
             compsContainer.getChildren().clear();
             compsMenu.getItems().clear();
@@ -132,8 +130,8 @@ public class SketchBoard implements Initializable {
         });
 
         try {
-            for(int i = 0; i < filePaths.size(); i++) {
-                pkg = objectMapper.readValue(new File(filePaths.get(i)), Package.class);
+            for (String filePath : filePaths) {
+                pkg = objectMapper.readValue(new File(filePath), Package.class);
                 populateGridPaneComps(pkg);
                 populateCompMenu(pkg.packageType, pkg);
             }
@@ -185,9 +183,9 @@ public class SketchBoard implements Initializable {
             compButton.setMaxHeight(100);
             compButton.setText(pkg.components.get(index).name);
             int finalIndex = index;
-            compButton.setOnAction(event -> {
+            compButton.setOnAction(_ -> {
                 FootprintGenerator fg = new FootprintGenerator();
-                fg.drawFootprint(sketchboard, pkg.components.get(finalIndex));
+                fg.drawFootprint(sketchboard, pkg.components.get(finalIndex), scaleTransform);
             });
 
             components.add(compButton,i,j);
@@ -201,7 +199,7 @@ public class SketchBoard implements Initializable {
         MenuItem pkgType = new MenuItem();
         pkgType.setText(packageType);
 
-        pkgType.setOnAction(event -> {
+        pkgType.setOnAction(_ -> {
             compsMenu.setText(packageType);
             compsContainer.getChildren().clear();
             populateGridPaneComps(pkg);
@@ -243,28 +241,6 @@ public class SketchBoard implements Initializable {
 
     // Start tracing
     public void startTracing() {}
-
-    public void zoomIn(){
-        zoomOutMenu.setDisable(false);
-        if(scale >= 1) {
-            setScale(scale + 0.2);
-            setAnchorSize();
-            //System.out.println("Zoomed In");
-        }
-    }
-
-    @FXML
-    private MenuItem zoomOutMenu;
-
-    public void zoomOut(){
-        if(scale > 1){
-            setScale(scale - 0.2);
-            setAnchorSize();
-            if(scale == 1) {
-                zoomOutMenu.setDisable(true);
-            }
-        }
-    }
 
 
     /* S E T T I N G S   M E N U */
