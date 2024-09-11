@@ -1,12 +1,29 @@
+@font-face {
+    font-family: 'Arvo';
+    src: url('fonts/Arvo-Bold.ttf');
 
-.label{
-    -fx-font-family: "Segoe UI Black";
+}
+
+#parentAnchorPane {
+    -fx-font-family: "Arvo";
+}
+
+#parentAnchorPane .button {
+    -fx-background-color: #3660A4;
+    -fx-background-insets: 0,1,2,3;
+    -fx-background-radius: 10;
+    -fx-border-width: 2;
+    -fx-border-color: white;
+    -fx-border-radius: 10;
+    -fx-padding: 12 30 12 30;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
 }
 
 #appTitle{
-    -fx-font-size: 50;
-    -fx-text-fill: #ffffff;
-    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.75), 10, 0.5, 2, 2);
+    -fx-font-size: 64;
+    -fx-text-fill: #14243E;
+     -fx-effect: dropshadow(gaussian, rgba(77, 136, 232, 1), 0, 1, 3, 3);
 }
 
 #optionsTitle{
@@ -15,48 +32,30 @@
 }
 
 #optionsPane{
-    -fx-background-color: White;
+    -fx-background-color: #233D69;
     -fx-border-color: black;
     -fx-border-width: 2px;
     -fx-border-radius: 10;
     -fx-background-radius: 10;
-}
-
-#descriptPane{
-    -fx-background-color: White;
-    -fx-border-color: black;
-    -fx-border-width: 2px;
-    -fx-border-radius: 10;
-    -fx-background-radius: 10;
-    -fx-padding: 10px;
 }
 
 #descriptLabel {
     -fx-font-size: 14;
-    -fx-font-family: "Dubai Medium";
     -fx-font-weight: normal;
 }
 
-.button {
-    -fx-background-color:
-            #000000,
-            linear-gradient(#7ebcea, #2f4b8f),
-            linear-gradient(#426ab7, #263e75),
-            linear-gradient(#395cab, #223768);
-    -fx-background-insets: 0,1,2,3;
-    -fx-background-radius: 3,2,2,2;
-    -fx-padding: 12 30 12 30;
+
+#buttonLabels {
     -fx-text-fill: white;
     -fx-font-size: 16px;
-    -fx-pref-width: 250;
-    -fx-pref-height: 50;
 }
 
-.button text {
-    -fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.8) , 0, 0.0 , 0 , 1);
+#buttonLabels .label:hover{
+    -fx-font-size: 16px;
+    -fx-underline: true;
 }
 
-.button:hover {
+#parentAnchorPane .button:hover {
     -fx-background-color:
             #000000,
             linear-gradient(#7ebcea, #2f4b8f),
@@ -68,6 +67,27 @@
     -fx-text-fill: white;
     -fx-font-size: 16px;
     -fx-font-weight:bold;
+}
+
+#createButton{
+    -fx-background-image: url('buttons/create.png');
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+#importButton {
+    -fx-background-image: url('buttons/import.png');
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+#controlButton {
+    -fx-background-image: url('buttons/controls.png');
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
 }
 
 #proceedButton {
